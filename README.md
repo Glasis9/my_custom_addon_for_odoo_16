@@ -1,1 +1,1 @@
-# my_custom_addon_for_odoo_16
+# My first custom addon for odoo 16.0
