@@ -21,7 +21,7 @@
     # always loaded
     "data": [
         "security/ir.model.access.csv",
-        "views/menu.xml",
+        "views/hospital_menu.xml",
         "views/book.xml",
         "views/author.xml"
     ],

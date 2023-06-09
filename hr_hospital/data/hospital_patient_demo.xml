@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hospital_patient_nasty_demo" model="hospital.patient">
+        <field name="name">Nasty</field>
+        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_oleg_demo"/>
+    </record>
+
+    <record id="hospital_patient_sveta_demo" model="hospital.patient">
+        <field name="name">Sveta</field>
+        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_jack_demo"/>
+    </record>
+
+    <record id="hospital_patient_katya_demo" model="hospital.patient">
+        <field name="name">Katya</field>
+        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_cristian_demo"/>
+    </record>
+
+</odoo>

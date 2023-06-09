@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hospital_doctor_oleg_demo" model="hospital.doctor">
+        <field name="name">Oleg Usenko</field>
+    </record>
+
+    <record id="hospital_doctor_jack_demo" model="hospital.doctor">
+        <field name="name">Jack Torn</field>
+    </record>
+
+    <record id="hospital_doctor_cristian_demo" model="hospital.doctor">
+        <field name="name">Cristian Monro</field>
+    </record>
+
+</odoo>

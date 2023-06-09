@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hospital_visits_patient_view_tree" model="ir.ui.view">
+        <field name="name">hospital.visits.patient.view.tree</field>
+        <field name="model">hospital.visits.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name_patient_id"/>
+                <field name="observing_doctor_id"/>
+                <field name="diagnosis_ids" widget="many2many_tags"/>
+                <field name="date_visit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_visits_patient_view_form" model="ir.ui.view">
+        <field name="name">hospital.visits.patient.form</field>
+        <field name="model">hospital.visits.patient</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="name_patient_id"/>
+                        <field name="observing_doctor_id"/>
+                        <field name="diagnosis_ids" widget="many2many_tags"/>
+                        <field name="date_visit"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_visits_patient_act_window" model="ir.actions.act_window">
+        <field name="name">Visits patient</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.visits.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hospital_visits_patient_menu"
+              action="hospital_visits_patient_act_window"
+              parent="hospital_catalog_menu"
+              name="Visits patient" sequence="200"/>
+
+</odoo>

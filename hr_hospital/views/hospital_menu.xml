@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="hospital_main_menu"
+            name="Hospital" sequence="300"/>
+
+    <menuitem id="hospital_catalog_menu"
+            parent="hospital_main_menu"
+            name="Catalog" sequence="100"/>
+
+    <menuitem id="hospital_settings_main_menu"
+            parent="hospital_main_menu"
+            name="Settings" sequence="9999"/>
+
+</odoo>
