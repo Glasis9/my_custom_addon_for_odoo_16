@@ -7,6 +7,8 @@
             <tree>
                 <field name="name"/>
                 <field name="isbn"/>
+                <field name="category_id"/>
+                <field name="author_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -21,6 +23,7 @@
                     <group>
                         <field name="name"/>
                         <field name="isbn"/>
+                        <field name="category_id"/>
                         <field name="author_ids" widget="many2many_tags"/>
                     </group>
                 </sheet>
