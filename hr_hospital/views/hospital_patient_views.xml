@@ -20,6 +20,12 @@
                 <sheet>
                     <group>
                         <field name="name"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="photo"/>
+                        <field name="gender"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
                         <field name="observing_doctor_id"/>
                     </group>
                 </sheet>

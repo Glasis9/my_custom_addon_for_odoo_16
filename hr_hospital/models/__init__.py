@@ -1,4 +1,8 @@
-from . import hospital_doctor
-from . import hospital_diagnosis
-from . import hospital_patient
-from . import hospital_visits_patient
+from . import (
+    hospital_person_mixin,
+    hospital_doctor,
+    hospital_diagnosis,
+    hospital_patient,
+    hospital_visits_patient,
+    hospital_contact_person,
+)
