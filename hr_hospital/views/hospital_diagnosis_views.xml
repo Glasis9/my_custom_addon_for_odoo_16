@@ -5,7 +5,12 @@
         <field name="model">hospital.diagnosis</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="diagnosis"/>
+                <field name="name_patient_id"/>
+                <field name="observing_doctor_id"/>
+                <field name="disease_ids" widget="many2many_tags"/>
+                <field name="date_diagnosis"/>
+                <field name="prescription"/>
+                <field name="comment"/>
             </tree>
         </field>
     </record>
@@ -18,7 +23,12 @@
                 <header></header>
                 <sheet>
                     <group>
-                        <field name="diagnosis"/>
+                        <field name="name_patient_id"/>
+                        <field name="observing_doctor_id"/>
+                        <field name="disease_ids" widget="many2many_tags"/>
+                        <field name="date_diagnosis"/>
+                        <field name="prescription"/>
+                        <field name="comment"/>
                     </group>
                 </sheet>
             </form>
@@ -35,6 +45,6 @@
     <menuitem id="hospital_diagnosis_menu"
               action="hospital_diagnosis_act_window"
               parent="hospital_catalog_menu"
-              name="Diagnosis" sequence="200"/>
+              name="Diagnosis" sequence="205"/>
 
 </odoo>

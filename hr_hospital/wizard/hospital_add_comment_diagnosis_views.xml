@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hospital_action_add_comment_wizard_view_form" model="ir.ui.view">
+        <field name="name">hospital.action.add.comment.wizard.view.form</field>
+        <field name="model">hospital.add.comment.diagnosis</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="comment"/>
+                </group>
+                <footer>
+                    <button name="update_field_comment_diagnosis"
+                        string="Add"
+                        type="object"
+                        icon="fa-plus"
+                        class="btn-primary"
+                    />
+                    <button special="cancel" class="oe_link" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="hospital_doctor_oleg_demo" model="hospital.doctor">
-        <field name="name">Oleg Usenko</field>
+    <record id="doctor_boyko_s_a_demo" model="hospital.doctor">
+        <field name="name">Boyko Svyatoslav Anatolievich</field>
+        <field name="phone">0973459863</field>
+        <field name="email">boyko_svyatoslav@gmail.com</field>
+        <field name="photo" type="base64" file="hr_hospital/static/img/male_1.png"/>
+        <field name="gender">male</field>
+        <field name="speciality">Surgeon</field>
+        <field name="intern">false</field>
     </record>
 
-    <record id="hospital_doctor_jack_demo" model="hospital.doctor">
-        <field name="name">Jack Torn</field>
+    <record id="doctor_safronova_v_i_demo" model="hospital.doctor">
+        <field name="name">Safronova Vera Ivanovna</field>
+        <field name="phone">0673547293</field>
+        <field name="email">safronova_vera@gmail.com</field>
+        <field name="photo" type="base64" file="hr_hospital/static/img/male_2.png"/>
+        <field name="gender">female</field>
+        <field name="speciality">Neurologist</field>
+        <field name="intern">false</field>
     </record>
 
-    <record id="hospital_doctor_cristian_demo" model="hospital.doctor">
-        <field name="name">Cristian Monro</field>
+    <record id="doctor_alaya_a_s_demo" model="hospital.doctor">
+        <field name="name">Alaya Alla Sergeevna</field>
+        <field name="phone">0983927864</field>
+        <field name="email">alaya_alla@gmail.com</field>
+        <field name="photo" type="base64" file="hr_hospital/static/img/male_2.png"/>
+        <field name="gender">female</field>
+        <field name="speciality">Nutritionist</field>
+        <field name="intern">false</field>
+    </record>
+
+    <record id="doctor_barabashkin_a_d_intern_demo" model="hospital.doctor">
+        <field name="name">Barabashkin Andrey Danilovich</field>
+        <field name="phone">0637893562</field>
+        <field name="email">barabashkin_andrey@gmail.com</field>
+        <field name="photo" type="base64" file="hr_hospital/static/img/male_1.png"/>
+        <field name="gender">male</field>
+        <field name="speciality">Therapist</field>
+        <field name="intern">true</field>
     </record>
 
 </odoo>

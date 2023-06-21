@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="disease_cold_demo" model="hospital.disease">
+        <field name="disease">Cold</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_viral_infections_demo">
+        </field>
+    </record>
+    <record id="disease_flu_demo" model="hospital.disease">
+        <field name="disease">Flu</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_viral_infections_demo">
+        </field>
+    </record>
+
+    <record id="disease_stroke_demo" model="hospital.disease">
+        <field name="disease">Stroke</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_cardiovascular_dis_demo">
+        </field>
+    </record>
+
+    <record id="disease_down_syndrome_demo" model="hospital.disease">
+        <field name="disease">Down syndrome</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_genetic_and_congenital_anomalies_demo">
+        </field>
+    </record>
+
+    <record id="disease_candidiasis_demo" model="hospital.disease">
+        <field name="disease">Candidiasis</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_fungal_infections_demo">
+        </field>
+    </record>
+
+    <record id="disease_skin_mycoses_demo" model="hospital.disease">
+        <field name="disease">Skin mycoses</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_fungal_infections_demo">
+        </field>
+    </record>
+
+    <record id="disease_bipolar_affective_dis_demo" model="hospital.disease">
+        <field name="disease">Bipolar affective disorder</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_mental_and_neurological_dis_demo">
+        </field>
+    </record>
+    <record id="disease_alzheimer_dis_demo" model="hospital.disease">
+        <field name="disease">Alzheimer's disease</field>
+        <field name="category_id"
+               ref="hr_hospital.disease_mental_and_neurological_dis_demo">
+        </field>
+    </record>
+
+</odoo>
+

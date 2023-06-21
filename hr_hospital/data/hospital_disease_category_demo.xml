@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="disease_chronic_noncommunicable_dis_demo"
+            model="hospital.disease.category">
+        <field name="name">Chronic noncommunicable diseases</field>
+    </record>
+    <record id="disease_cardiovascular_dis_demo"
+            model="hospital.disease.category">
+        <field name="name">Cardiovascular diseases</field>
+        <field name="parent_id"
+               ref="hr_hospital.disease_chronic_noncommunicable_dis_demo">
+        </field>
+    </record>
+
+    <record id="disease_genetic_and_congenital_anomalies_demo"
+            model="hospital.disease.category">
+        <field name="name">Genetic and congenital anomalies</field>
+    </record>
+
+    <record id="disease_infectious_dis_demo"
+            model="hospital.disease.category">
+        <field name="name">Infectious diseases</field>
+    </record>
+    <record id="disease_fungal_infections_demo"
+            model="hospital.disease.category">
+        <field name="name">Fungal infections</field>
+        <field name="parent_id"
+               ref="hr_hospital.disease_infectious_dis_demo">
+        </field>
+    </record>
+    <record id="disease_viral_infections_demo"
+            model="hospital.disease.category">
+        <field name="name">Viral infections</field>
+        <field name="parent_id"
+               ref="hr_hospital.disease_infectious_dis_demo">
+        </field>
+    </record>
+
+    <record id="disease_mental_and_neurological_dis_demo"
+            model="hospital.disease.category">
+        <field name="name">Mental and neurological diseases</field>
+    </record>
+
+</odoo>

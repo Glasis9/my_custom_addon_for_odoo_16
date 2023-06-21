@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="hospital_patient_nasty_demo" model="hospital.patient">
-        <field name="name">Nasty</field>
-        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_oleg_demo"/>
+    <record id="patient_zhuk_e_s_demo" model="hospital.patient">
+        <field name="name">Zhuk Elena Sergeevna</field>
+        <field name="phone">0983927864</field>
+        <field name="email">zhuk_elena@gmail.com</field>
+        <field name="photo" type="base64"
+               file="hr_hospital/static/img/male_2.png"/>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1990, 8, 23)"/>
+        <field name="passport_data">passport data</field>
+        <field name="contact_person_id"
+               ref="hr_hospital.contact_person_plotnikova_e_v_demo"/>
+        <field name="observing_doctor_id"
+               ref="hr_hospital.doctor_boyko_s_a_demo"/>
     </record>
 
-    <record id="hospital_patient_sveta_demo" model="hospital.patient">
-        <field name="name">Sveta</field>
-        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_jack_demo"/>
+    <record id="patient_sverepov_s_a_demo" model="hospital.patient">
+        <field name="name">Sverepov Sergey Anatolievich</field>
+        <field name="phone">0992738794</field>
+        <field name="email">sverepov_sergey@gmail.com</field>
+        <field name="photo" type="base64"
+               file="hr_hospital/static/img/male_1.png"/>
+        <field name="gender">male</field>
+        <field name="birth_date" eval="datetime(1978, 9, 1)"/>
+        <field name="passport_data">passport data</field>
+        <field name="contact_person_id"
+               ref="hr_hospital.contact_person_nikiforov_e_s_demo"/>
+        <field name="observing_doctor_id"
+               ref="hr_hospital.doctor_safronova_v_i_demo"/>
     </record>
 
-    <record id="hospital_patient_katya_demo" model="hospital.patient">
-        <field name="name">Katya</field>
-        <field name="observing_doctor_id" ref="hr_hospital.hospital_doctor_cristian_demo"/>
+    <record id="patient_khvebel_a_g_demo" model="hospital.patient">
+        <field name="name">Khvebel Andrey Georgievich</field>
+        <field name="phone">0986783657</field>
+        <field name="email">khvebel_andrey@gmail.com</field>
+        <field name="photo" type="base64"
+               file="hr_hospital/static/img/male_1.png"/>
+        <field name="gender">male</field>
+        <field name="birth_date" eval="datetime(1984, 6, 15)"/>
+        <field name="passport_data">passport data</field>
+        <field name="contact_person_id"
+               ref="hr_hospital.contact_person_sviridov_b_a_demo"/>
+        <field name="observing_doctor_id"
+               ref="hr_hospital.doctor_alaya_a_s_demo"/>
     </record>
 
 </odoo>

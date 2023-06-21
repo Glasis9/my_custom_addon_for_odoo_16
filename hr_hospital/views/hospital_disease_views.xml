@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hospital_disease_view_tree" model="ir.ui.view">
+        <field name="name">hospital.disease.view.tree</field>
+        <field name="model">hospital.disease</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="disease"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_disease_view_form" model="ir.ui.view">
+        <field name="name">hospital.disease.form</field>
+        <field name="model">hospital.disease</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="disease"/>
+                        <field name="category_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_disease_act_window" model="ir.actions.act_window">
+        <field name="name">Disease</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.disease</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hospital_disease_menu"
+              action="hospital_disease_act_window"
+              parent="hospital_catalog_menu"
+              name="Disease" sequence="205"/>
+
+</odoo>

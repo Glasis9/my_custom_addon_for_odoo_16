@@ -6,6 +6,14 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="photo"/>
+                <field name="gender"/>
+                <field name="birth_date"/>
+                <field name="age"/>
+                <field name="passport_data"/>
+                <field name="contact_person_id"/>
                 <field name="observing_doctor_id"/>
             </tree>
         </field>
@@ -26,6 +34,8 @@
                         <field name="gender"/>
                         <field name="birth_date"/>
                         <field name="age"/>
+                        <field name="passport_data"/>
+                        <field name="contact_person_id"/>
                         <field name="observing_doctor_id"/>
                     </group>
                 </sheet>
@@ -43,6 +53,6 @@
     <menuitem id="hospital_patient_menu"
               action="hospital_patient_act_window"
               parent="hospital_catalog_menu"
-              name="Patient" sequence="200"/>
+              name="Patient" sequence="202"/>
 
 </odoo>

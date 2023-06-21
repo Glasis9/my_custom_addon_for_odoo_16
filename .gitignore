@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 /.venv
 /.pytest_cache
-
+odoo16
 # C extensions
 *.so
 
