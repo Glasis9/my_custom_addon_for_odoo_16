@@ -12,37 +12,35 @@ class HospitalAllocationDoctor(models.Model):
         string="Doctor name",
         ondelete="cascade",
     )
-    date_receipt = fields.Date(
+    date_time_receipt = fields.Datetime(
         required=True,
-        string="Date of receipt",
+        string="Date and time of receipt",
         default=fields.date.today(),
     )
-    time_receipt = fields.Float(string="Time")
 
-    @api.onchange("time_receipt")
-    def _onchange_time_receipt(self):
-        for obj in self:
-            res = self.env["hospital.allocation.doctor"].search([])
-            res = res.filtered(lambda r: r.doctor_id == obj.doctor_id and
-                                         r.date_receipt == obj.date_receipt and
-                                         r.id != obj.id
-                               )
-            for time in res:
-                if obj.time_receipt == time["time_receipt"]:
-                    raise exceptions.ValidationError(
-                        _("This appointment time is already taken, "
-                          "please specify another"))
+    @api.model
+    def create(self, vals_list):
+        res = self.env["hospital.allocation.doctor"].search([
+            ("doctor_id", "=", vals_list.get("doctor_id")),
+            ("date_time_receipt", "=", vals_list.get("date_time_receipt")),
+            ("id", "!=", vals_list.get("id"))
+        ])
+        if len(res) > 0:
+            raise exceptions.ValidationError(
+                _("This appointment time is already taken, "
+                  "please specify another"))
+        return super(HospitalAllocationDoctor, self).create(vals_list)
 
     def write(self, vals):
+        res = super(HospitalAllocationDoctor, self).write(vals)
         for obj in self:
-            res = self.env["hospital.allocation.doctor"].search([])
-            res = res.filtered(lambda r: r.doctor_id == obj.doctor_id and
-                                         r.date_receipt == obj.date_receipt and
-                                         r.id != obj.id
-                               )
-            for time in res:
-                if obj.time_receipt == time["time_receipt"]:
-                    raise exceptions.ValidationError(
-                        _("This appointment time is already taken, "
-                          "please specify another"))
-        return super(HospitalAllocationDoctor, self).write(vals)
+            res = self.env["hospital.allocation.doctor"].search([
+                ("doctor_id", "=", obj.doctor_id.id),
+                ("date_time_receipt", "=", obj.date_time_receipt),
+                ("id", "!=", obj.id)
+            ])
+            if len(res) > 0:
+                raise exceptions.ValidationError(
+                            _("This appointment time is already taken, "
+                              "please specify another"))
+        return res

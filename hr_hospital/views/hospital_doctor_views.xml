@@ -46,6 +46,16 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="hospital_disease_report_wizard_act_window" model="ir.actions.report">
+        <field name="name">Disease report</field>
+        <field name="res_model">hospital.disease.report.wizard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hospital_doctor_view_tree"/>
+        <field name="binding_view_types">form</field>
+        <field name="binding_type">report</field>
+    </record>
+
     <menuitem id="hospital_doctor_menu"
               action="hospital_doctor_act_window"
               parent="hospital_catalog_menu"

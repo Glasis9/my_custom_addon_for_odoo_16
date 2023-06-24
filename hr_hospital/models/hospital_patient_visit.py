@@ -44,16 +44,19 @@ class HospitalPatientVisit(models.Model):
         ondelete="cascade",
     )
 
+    by_appointment = fields.Boolean()
+
     def name_get(self):
         return [(obj.id, "%s" % obj.name_patient_id.name) for obj in self]
 
     @api.depends("date_time_start")
     def _compute_date(self):
-        for obj in self:
-            if obj.date_time_start < datetime.datetime.now():
-                obj.state = "completed"
+        for visit in self:
+            if visit.date_time_start < datetime.datetime.now() and \
+                    visit.name_doctor_id and visit.name_patient_id:
+                visit.state = "completed"
             else:
-                obj.state = "in progress"
+                visit.state = "in progress"
 
     def unlink(self):
         for record in self:

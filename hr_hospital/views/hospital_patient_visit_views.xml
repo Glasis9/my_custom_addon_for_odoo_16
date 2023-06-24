@@ -9,6 +9,8 @@
                 <field name="name_doctor_id"/>
                 <field name="name_patient_id"/>
                 <field name="diagnosis_id"/>
+                <field name="state"/>
+                <field name="by_appointment"/>
             </tree>
         </field>
     </record>
@@ -18,7 +20,6 @@
         <field name="model">hospital.patient.visit</field>
         <field name="arch" type="xml">
             <form duplicate="false" import="false">
-                <header></header>
                 <sheet>
                     <group>
                         <field name="date_time_start"/>
@@ -26,6 +27,7 @@
                         <field name="name_patient_id"/>
                         <field name="diagnosis_id"/>
                         <field name="state"/>
+                        <field name="by_appointment" readonly="1"/>
                     </group>
                 </sheet>
             </form>
@@ -43,6 +45,6 @@
     <menuitem id="hospital_patient_visit_menu"
               action="hospital_patient_visit_act_window"
               parent="hospital_catalog_menu"
-              name="Patient visit" sequence="207"/>
+              name="Patient visit" sequence="209"/>
 
 </odoo>

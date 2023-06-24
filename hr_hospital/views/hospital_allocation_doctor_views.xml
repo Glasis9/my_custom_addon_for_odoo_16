@@ -6,8 +6,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="doctor_id"/>
-                <field name="date_receipt"/>
-                <field name="time_receipt" widget="float_time"/>
+                <field name="date_time_receipt"/>
             </tree>
         </field>
     </record>
@@ -21,8 +20,7 @@
                 <sheet>
                     <group>
                         <field name="doctor_id"/>
-                        <field name="date_receipt"/>
-                        <field name="time_receipt" widget="float_time"/>
+                        <field name="date_time_receipt"/>
                     </group>
                 </sheet>
             </form>
@@ -40,6 +38,6 @@
     <menuitem id="hospital_diagnosis_menu"
               action="hospital_allocation_doctor_act_window"
               parent="hospital_catalog_menu"
-              name="Allocation doctor" sequence="209"/>
+              name="Allocation doctor" sequence="207"/>
 
 </odoo>

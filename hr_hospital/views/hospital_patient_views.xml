@@ -4,7 +4,10 @@
         <field name="name">hospital.patient.view.tree</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree multi_edit="1">
+                <header>
+                    <button name="action_change_doctor" string="Change doctor" class="oe_highlight" type="object"/>
+                </header>
                 <field name="name"/>
                 <field name="phone"/>
                 <field name="email"/>

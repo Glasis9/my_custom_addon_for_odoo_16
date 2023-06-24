@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hospital_add_making_appointment_wizard_view_form" model="ir.ui.view">
+        <field name="name">hospital.add.making.appointment.wizard.view.form</field>
+        <field name="model">hospital.add.making.appointment.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="doctor_id"/>
+                    <field name="available_date_time"/>
+                    <field name="date_time_appointment"/>
+                    <field name="name_patient_id"/>
+                </group>
+                <footer>
+                    <button name="add_appointment"
+                        string="Make"
+                        type="object"
+                        icon="fa-plus"
+                        class="btn-primary"
+                    />
+                    <button special="cancel" class="oe_link" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_wizard_make_appointment"
+            model="ir.actions.act_window">
+        <field name="name">Make appointment (wizard)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.add.making.appointment.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id ="open_wizard_make_appointment_menu"
+              action="open_wizard_make_appointment"
+              parent="hospital_catalog_menu"
+              name="Make Appointment to doctor (wizard)"
+              sequence="208"/>
+
+</odoo>

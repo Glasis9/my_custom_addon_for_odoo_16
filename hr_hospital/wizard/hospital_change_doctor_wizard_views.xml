@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="hospital_action_add_comment_wizard_view_form" model="ir.ui.view">
-        <field name="name">hospital.action.add.comment.wizard.view.form</field>
-        <field name="model">hospital.add.comment.diagnosis</field>
+    <record id="hospital_change_doctor_wizard_view_form" model="ir.ui.view">
+        <field name="name">hospital.change.doctor.wizard.view.form</field>
+        <field name="model">hospital.change.doctor.wizard</field>
         <field name="arch" type="xml">
             <form>
                 <group>
-                    <field name="comment"/>
+                    <field name="doctor_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="change_doctor_id"/>
                 </group>
                 <footer>
-                    <button name="update_field_comment_diagnosis"
-                        string="Add"
+                    <button name="change_doctor"
+                        string="Change doctor"
                         type="object"
                         icon="fa-plus"
                         class="btn-primary"
