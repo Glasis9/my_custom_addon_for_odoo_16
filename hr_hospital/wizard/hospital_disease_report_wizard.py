@@ -5,29 +5,55 @@ class HospitalDiseaseReportWizard(models.TransientModel):
     _name = "hospital.disease.report.wizard"
     _description = "Disease report"
 
-    year = fields.Date(required=True)
-    month = fields.Date(required=True)
+    month_year = fields.Date(string="Year and month")
 
-    disease = fields.Many2one(
+    disease_id = fields.Many2one(
         comodel_name="hospital.disease"
     )
-    count_disease = fields.Integer()
 
-    def disease_report(self):
-        for record in self:
-            pass
+    count_diagnosis = fields.Integer()
+    diagnosis_id = fields.Many2one(
+        comodel_name="hospital.diagnosis"
+    )
 
+    def action_disease_report(self):
+        for rec in self:
+            diagnosis = []
+            if rec.disease_id and rec.month_year:
+                diagnosis_all = self.env["hospital.diagnosis"].search([
+                    ("disease_ids", "in", [rec.disease_id.id])
+                ])
+                for diagnos in diagnosis_all:
+                    if diagnos.date_diagnosis.year == \
+                            rec.month_year.year and \
+                            diagnos.date_diagnosis.month == \
+                            rec.month_year.month:
+                        diagnosis.append(diagnos.id)
 
+            if rec.disease_id:
+                diagnos = self.env["hospital.diagnosis"].search([
+                    ("disease_ids", "in", [rec.disease_id.id])
+                ])
+                for diag in diagnos:
+                    diagnosis.append(diag.id)
 
-    # def action_disease_report(self):
-    #     doctor_ids = [rec.observing_doctor_id.id for rec in self]
-    #     return {
-    #         "name": _("Change doctor"),
-    #         "type": "ir.actions.act_window",
-    #         "view_mode": "form",
-    #         "res_model": "hospital.change.doctor.wizard",
-    #         "target": "new",
-    #         "context": {
-    #             "default_doctor_ids": doctor_ids,
-    #         },
-    #     }
+            if rec.month_year:
+                diagnosis_all = self.env["hospital.diagnosis"].search([])
+
+                for diagnos in diagnosis_all:
+                    if diagnos.date_diagnosis.year == \
+                            rec.month_year.year and \
+                            diagnos.date_diagnosis.month == \
+                            rec.month_year.month:
+                        diagnosis.append(diagnos.id)
+
+            return {
+                "name": _("Disease report"),
+                "type": "ir.actions.act_window",
+                "view_mode": "tree",
+                "res_model": "hospital.diagnosis",
+                "target": "new",
+                "domain": [
+                    ("id", "in", diagnosis)
+                ],
+            }

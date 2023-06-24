@@ -7,13 +7,11 @@
         <field name="arch" type="xml">
             <form>
                 <group>/>
-                    <field name="year"/>
-                    <field name="month"/>
-                    <field name="disease"/>
-                    <field name="count_disease" readonly="1"/>
+                    <field name="month_year"/>
+                    <field name="disease_id"/>
                 </group>
                 <footer>
-                    <button name="disease_report"
+                    <button name="action_disease_report"
                         string="View report"
                         type="object"
                         icon="fa-plus"
@@ -25,22 +23,30 @@
         </field>
     </record>
 
-<!--    <record id="hospital_disease_report_act_window" model="ir.actions.report">-->
-<!--        <field name="name">Disease report</field>-->
-<!--&lt;!&ndash;        <field name="type">ir.actions.act_window</field>&ndash;&gt;-->
-<!--&lt;!&ndash;        <field name="report_name">hr_hospital.action_disease_report</field>&ndash;&gt;-->
-<!--&lt;!&ndash;        <field name="res_model">hospital.disease.report.wizard</field>&ndash;&gt;-->
-<!--&lt;!&ndash;        <field name="view_mode">tree,form</field>&ndash;&gt;-->
-<!--&lt;!&ndash;        <field name="binding_model_id" ref="hospital_doctor_view_tree"/>&ndash;&gt;-->
-<!--        <field name="binding_type">report</field>-->
-<!--    </record>-->
+    <record id="hospital_disease_report_view_tree" model="ir.ui.view">
+        <field name="name">hospital.disease.report.wizard.view.tree</field>
+        <field name="model">hospital.disease.report.wizard</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="diagnosis_id"/>
+                <field name="count_diagnosis"/>
+            </tree>
+        </field>
+    </record>
 
-<!--    <record id="hospital_disease_report_act_window" model="ir.actions.act_window">-->
-<!--        <field name="name">Disease report</field>-->
-<!--        <field name="type">ir.actions.act_window</field>-->
-<!--        <field name="res_model">hospital.disease.report.wizard</field>-->
-<!--        <field name="view_mode">form</field>-->
-<!--        <field name="target">new</field>-->
-<!--    </record>-->
+    <record id="action_disease_report_wizard"
+            model="ir.actions.act_window">
+        <field name="name">Disease report (wizard)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.disease.report.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id ="action_disease_report_wizard_menu"
+              action="action_disease_report_wizard"
+              parent="hospital_catalog_menu"
+              name="Disease report (wizard)"
+              sequence="211"/>
 
 </odoo>

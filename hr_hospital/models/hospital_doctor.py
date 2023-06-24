@@ -18,17 +18,3 @@ class HospitalDoctor(models.Model):
                 doctor.mentor = False
             else:
                 doctor.mentor = True
-
-    # def action_disease_report(self):
-    #     # doctor_ids = [rec.observing_doctor_id.id for rec in self]
-    #     for record in self:
-    #         return {
-    #             "name": _("Disease report"),
-    #             "type": "ir.actions.act_window",
-    #             "view_mode": "form",
-    #             "res_model": "hospital.disease.report.wizard",
-    #             "target": "new",
-    #             # "context": {
-    #             #     "default_doctor_ids": doctor_ids,
-    #             # },
-    #         }

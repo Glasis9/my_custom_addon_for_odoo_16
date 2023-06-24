@@ -46,13 +46,13 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="hospital_disease_report_wizard_act_window" model="ir.actions.report">
+    <record id="hospital_disease_report_wizard_act_window" model="ir.actions.act_window">
         <field name="name">Disease report</field>
         <field name="res_model">hospital.disease.report.wizard</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">form</field>
         <field name="target">new</field>
-        <field name="binding_model_id" ref="hospital_doctor_view_tree"/>
-        <field name="binding_view_types">form</field>
+        <field name="binding_model_id" ref="model_hospital_doctor"/>
+        <field name="binding_view_types">form,list</field>
         <field name="binding_type">report</field>
     </record>
 
