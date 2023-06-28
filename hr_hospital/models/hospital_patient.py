@@ -8,7 +8,7 @@ class HospitalPatient(models.Model):
     _description = "Patient"
     _inherit = "hospital.person"
 
-    birth_date = fields.Date(requirement=True)
+    birth_date = fields.Date(required=True)
     age = fields.Char(
         readonly=True,
         compute="_compute_age",
@@ -24,6 +24,16 @@ class HospitalPatient(models.Model):
         comodel_name="hospital.doctor",
         string="Observing doctor",
         ondelete="cascade",
+    )
+
+    diagnosis_id = fields.One2many(
+        comodel_name="hospital.diagnosis",
+        inverse_name="name_patient_id",
+    )
+
+    analysis_id = fields.One2many(
+        comodel_name="hospital.analysis",
+        inverse_name="name_patient_id",
     )
 
     @api.depends("birth_date")
@@ -59,3 +69,28 @@ class HospitalPatient(models.Model):
                 "default_doctor_ids": doctor_ids,
             },
         }
+
+    def action_history_patient_visit(self):
+        for patient in self:
+            return {
+                "name": _("History patient visit"),
+                "type": "ir.actions.act_window",
+                "view_mode": "tree",
+                "res_model": "hospital.patient.visit",
+                "target": "new",
+                "domain": [("name_patient_id.id", "=", patient.id)]
+            }
+
+    def action_make_appointment_to_doctor_wizard(self):
+        for patient in self:
+            print(patient.contact_person_id.name)
+            return {
+                "name": _("Make appointment to doctor"),
+                "type": "ir.actions.act_window",
+                "view_mode": "form",
+                "res_model": "hospital.add.making.appointment.wizard",
+                "target": "new",
+                "context": {
+                    "default_name_patient_id": patient.id,
+                },
+            }

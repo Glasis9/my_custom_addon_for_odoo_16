@@ -3,22 +3,22 @@
 
     <record id="allocation_doctor_boyko_s_a_9_0_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 24, 6, 0, 0)"/>
+        <field name="date_time_receipt" eval="datetime(2024, 6, 24, 6, 0, 0)"/>
     </record>
 
     <record id="allocation_doctor_boyko_s_a_10_0_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 24, 7, 0, 0)"/>
+        <field name="date_time_receipt" eval="datetime(2024, 6, 24, 7, 0, 0)"/>
     </record>
 
     <record id="allocation_doctor_boyko_s_a_11_0_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 24, 8, 0, 0)"/>
+        <field name="date_time_receipt" eval="datetime(2024, 6, 24, 8, 0, 0)"/>
     </record>
 
     <record id="allocation_doctor_safronova_v_i_10_0_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_safronova_v_i_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 24, 7, 0, 0)"/>
+        <field name="date_time_receipt" eval="datetime(2024, 6, 24, 7, 0, 0)"/>
     </record>
 
 </odoo>

@@ -39,7 +39,12 @@ class HospitalAddMakingAppointmentWizard(models.TransientModel):
     def _onchange_doctor_id(self):
         for obj in self:
             available_date_time = self.env["hospital.allocation.doctor"] \
-                .search([("doctor_id", "=", obj.doctor_id.id)])
+                .search(
+                [
+                    ("doctor_id", "=", obj.doctor_id.id),
+                    ("date_time_receipt", ">=", datetime.datetime.now()),
+                ]
+            )
             if len(available_date_time) != 0:
                 record_str = [str(rec.date_time_receipt +
                                   datetime.timedelta(hours=3))
@@ -53,7 +58,12 @@ class HospitalAddMakingAppointmentWizard(models.TransientModel):
     def add_appointment(self):
         for obj in self:
             available_date_time = self.env["hospital.allocation.doctor"] \
-                .search([("doctor_id", "=", obj.doctor_id.id)])
+                .search(
+                [
+                    ("doctor_id", "=", obj.doctor_id.id),
+                    ("date_time_receipt", ">=", datetime.datetime.now()),
+                ]
+            )
             record = [rec.date_time_receipt for rec in available_date_time]
             if obj.date_time_appointment not in record:
                 raise exceptions.ValidationError(

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="analysis_blood_urine_zhuk_e_s_demo"
+            model="hospital.analysis">
+        <field name="analysis">Blood, urine</field>
+        <field name="name_patient_id"
+               ref="hr_hospital.patient_zhuk_e_s_demo"/>
+    </record>
+
+    <record id="analysis_feces_scraping_sverepov_s_a_demo"
+            model="hospital.analysis">
+        <field name="analysis">Feces, scraping</field>
+        <field name="name_patient_id"
+               ref="hr_hospital.patient_sverepov_s_a_demo"/>
+    </record>
+
+    <record id="analysis_blood_urine_feces_khvebel_a_g"
+            model="hospital.analysis">
+        <field name="analysis">Blood, urine, feces</field>
+        <field name="name_patient_id"
+               ref="hr_hospital.patient_khvebel_a_g_demo"/>
+    </record>
+
+</odoo>

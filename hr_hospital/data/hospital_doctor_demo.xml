@@ -8,7 +8,8 @@
         <field name="photo" type="base64" file="hr_hospital/static/img/male_1.png"/>
         <field name="gender">male</field>
         <field name="speciality">Surgeon</field>
-        <field name="intern">false</field>
+        <field name="intern_id" ref="hr_hospital.doctor_barabashkin_a_d_intern_demo"/>
+        <field name="state">no intern</field>
     </record>
 
     <record id="doctor_safronova_v_i_demo" model="hospital.doctor">
@@ -18,7 +19,7 @@
         <field name="photo" type="base64" file="hr_hospital/static/img/male_2.png"/>
         <field name="gender">female</field>
         <field name="speciality">Neurologist</field>
-        <field name="intern">false</field>
+        <field name="state">no intern</field>
     </record>
 
     <record id="doctor_alaya_a_s_demo" model="hospital.doctor">
@@ -28,7 +29,7 @@
         <field name="photo" type="base64" file="hr_hospital/static/img/male_2.png"/>
         <field name="gender">female</field>
         <field name="speciality">Nutritionist</field>
-        <field name="intern">false</field>
+        <field name="state">no intern</field>
     </record>
 
     <record id="doctor_barabashkin_a_d_intern_demo" model="hospital.doctor">
@@ -38,7 +39,8 @@
         <field name="photo" type="base64" file="hr_hospital/static/img/male_1.png"/>
         <field name="gender">male</field>
         <field name="speciality">Therapist</field>
-        <field name="intern">true</field>
+        <field name="doctor_mentor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
+        <field name="state">intern</field>
     </record>
 
 </odoo>

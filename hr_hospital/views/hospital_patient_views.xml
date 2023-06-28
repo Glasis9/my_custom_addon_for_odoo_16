@@ -27,20 +27,35 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form duplicate="false" import="false">
-                <header></header>
+                <header>
+                    <button type="object" class="btn-success" string="History patient visit" name="action_history_patient_visit"/>
+                    <button type="object" class="btn-warning" string="Make appointment to doctor" name="action_make_appointment_to_doctor_wizard"/>
+                </header>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="phone"/>
-                        <field name="email"/>
-                        <field name="photo"/>
-                        <field name="gender"/>
-                        <field name="birth_date"/>
-                        <field name="age"/>
-                        <field name="passport_data"/>
-                        <field name="contact_person_id"/>
-                        <field name="observing_doctor_id"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="photo"/>
+                            <field name="gender"/>
+                        </group>
+                        <group>
+                            <field name="birth_date"/>
+                            <field name="age"/>
+                            <field name="passport_data"/>
+                            <field name="contact_person_id"/>
+                            <field name="observing_doctor_id"/>
+                        </group>
                     </group>
+                    <notebook>
+                       <page string="Diagnosis">
+                           <field name="diagnosis_id"/>
+                       </page>
+                        <page string="Analysis">
+                            <field name="analysis_id"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

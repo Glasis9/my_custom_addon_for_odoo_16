@@ -11,9 +11,34 @@
                 <field name="photo"/>
                 <field name="gender"/>
                 <field name="speciality"/>
-                <field name="intern"/>
-                <field name="mentor"/>
+                <field name="doctor_mentor_id"/>
+                <field name="intern_id"/>
+                <field name="state"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="hospital_doctor_view_kanban" model="ir.ui.view">
+        <field name="name">hospital.doctor.view.kanban</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="speciality">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <field name="name"/>
+                        </div>
+                    </t>
+                </templates>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="photo"/>
+                <field name="gender"/>
+                <field name="speciality"/>
+                <field name="doctor_mentor_id"/>
+                <field name="intern_id"/>
+                <field name="state"/>
+            </kanban>
         </field>
     </record>
 
@@ -25,14 +50,27 @@
                 <header></header>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="phone"/>
-                        <field name="email"/>
-                        <field name="photo"/>
-                        <field name="gender"/>
-                        <field name="speciality"/>
-                        <field name="intern"/>
-                        <field name="mentor"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="photo"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="speciality"/>
+                            <field name="doctor_mentor_id"/>
+                            <field name="intern_id"/>
+                            <field name="state"/>
+                        </group>
+                        <notebook>
+                            <page name="Mentor">
+                                <field name="intern_one2many_id"/>
+                            </page>
+                            <page name="Intern">
+                                <field name="doctor_mentor_one2many_id" string="Intern" mode="kanban"/>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
             </form>
@@ -43,7 +81,7 @@
         <field name="name">Doctors</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.doctor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <record id="hospital_disease_report_wizard_act_window" model="ir.actions.act_window">

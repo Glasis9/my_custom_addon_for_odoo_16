@@ -27,7 +27,7 @@ class HospitalDiagnosis(models.Model):
         string="Date of diagnosis",
         default=fields.date.today(),
     )
-    prescription = fields.Char()
+    prescription = fields.Char(string="Doctor's appointment")
     comment = fields.Text(help="Commentary from the Doctor-Mentor")
 
     def name_get(self):
@@ -39,7 +39,10 @@ class HospitalDiagnosis(models.Model):
     @api.constrains("comment")
     def _constrains_comment(self):
         for diagnosis in self:
-            if diagnosis.observing_doctor_id.intern and not diagnosis.comment:
+            if diagnosis.observing_doctor_id.doctor_mentor and \
+                    not diagnosis.comment:
                 raise exceptions.ValidationError(
-                    _("The doctor-mentor must add a comment to the diagnosis!")
+                    _(f"Doctor-mentor: "
+                      f"{diagnosis.observing_doctor_id.doctor_mentor.name} must "
+                      f"add a comment to the diagnosis!")
                 )
