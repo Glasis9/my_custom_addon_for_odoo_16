@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hospital_types_analysis_tree" model="ir.ui.view">
+        <field name="name">hospital.types.analysis.tree</field>
+        <field name="model">hospital.types.analysis</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name"/>
+                <field name="analysis_count"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_types_analysis_form" model="ir.ui.view">
+        <field name="name">hospital.types.analysis.form</field>
+        <field name="model">hospital.types.analysis</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_types_analysis_act_window" model="ir.actions.act_window">
+        <field name="name">Types analysis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.types.analysis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hospital_types_analysis_menu"
+              action="hospital_types_analysis_act_window"
+              parent="hospital_analysis_menu"
+              name="Types analysis" sequence="201"/>
+</odoo>

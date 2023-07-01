@@ -15,6 +15,9 @@ class HospitalPatientVisit(models.Model):
             "completed": [("readonly", True)],
         },
     )
+    date_time_finish = fields.Datetime(
+        compute="_compute_finish_time",
+    )
     name_doctor_id = fields.Many2one(
         required=True,
         comodel_name="hospital.doctor",
@@ -48,6 +51,12 @@ class HospitalPatientVisit(models.Model):
 
     def name_get(self):
         return [(obj.id, "%s" % obj.name_patient_id.name) for obj in self]
+
+    @api.depends("date_time_finish")
+    def _compute_finish_time(self):
+        for obj in self:
+            obj.date_time_finish = obj.date_time_start + \
+                                   datetime.timedelta(minutes=30)
 
     @api.depends("date_time_start")
     def _compute_date(self):

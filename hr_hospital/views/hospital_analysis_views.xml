@@ -6,7 +6,10 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name_patient_id"/>
+                <field name="types_analysis_ids" widget="many2many_tags"/>
                 <field name="analysis"/>
+                <field name="date"/>
+                <field name="price"/>
             </tree>
         </field>
     </record>
@@ -20,23 +23,52 @@
                 <sheet>
                     <group>
                         <field name="name_patient_id"/>
+                        <field name="types_analysis_ids" widget="many2many_tags"/>
                         <field name="analysis"/>
+                        <field name="date"/>
+                        <field name="price"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="hospital_analysis_view_search" model="ir.ui.view">
+        <field name="name">hospital.analysis.view.search</field>
+        <field name="model">hospital.analysis</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name_patient_id" filter_domain="['|',('name_patient_id.name','ilike',self),('name_patient_id.phone','=',self)]"/>
+                <field name="analysis" operator="ilike"/>
+
+                <filter name="create_date" date="date" string="Analysis submission date"/>
+
+                <filter name="groupby_types_analysis_ids" string="Types analysis" context="{'group_by': 'types_analysis_ids'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hospital_analysis_view_pivot" model="ir.ui.view">
+         <field name="name">hospital.analysis.view.pivot</field>
+         <field name="model">hospital.analysis</field>
+         <field name="arch" type="xml">
+             <pivot display_quantity="0">
+                 <field name="date" interval="month" type="col"/>
+                 <field name="types_analysis_ids" type="row"/>
+             </pivot>
+         </field>
+    </record>
+
     <record id="hospital_analysis_act_window" model="ir.actions.act_window">
         <field name="name">Analysis</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.analysis</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot</field>
     </record>
 
-    <menuitem id="hospital_analysis_menu"
+    <menuitem id="hospital_analysis_menu_view"
               action="hospital_analysis_act_window"
-              parent="hospital_catalog_menu"
-              name="Analysis" sequence="213"/>
+              parent="hospital_analysis_menu"
+              name="Analysis" sequence="202"/>
 
 </odoo>

@@ -35,16 +35,41 @@
         </field>
     </record>
 
+    <record id="hospital_diagnosis_view_pivot" model="ir.ui.view">
+         <field name="name">hospital.diagnosis.pivot</field>
+         <field name="model">hospital.diagnosis</field>
+         <field name="arch" type="xml">
+             <pivot display_quantity="0">
+                 <field name="date_diagnosis" interval="day" type="col"/>
+                 <field name="observing_doctor_id" type="col"/>
+<!--                 <field name="category_disease" type="row"/>-->
+                 <field name="disease_ids" type="row"/>
+                 <field name="name_patient_id" type="row"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="hospital_diagnosis_view_graph" model="ir.ui.view">
+        <field name="name">hospital.diagnosis.graph</field>
+        <field name="model">hospital.diagnosis</field>
+        <field name="arch" type="xml">
+            <graph type="pie">
+                <field name="disease_ids"/>
+                <field name="date_diagnosis" interval="day"/>
+            </graph>
+        </field>
+    </record>
+
     <record id="hospital_diagnosis_test_act_window" model="ir.actions.act_window">
         <field name="name">Diagnosis</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.diagnosis</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
     </record>
 
     <menuitem id="hospital_diagnosis_test_menu"
               action="hospital_diagnosis_test_act_window"
-              parent="hospital_catalog_menu"
-              name="Diagnosis" sequence="206"/>
+              parent="hospital_patient_menu"
+              name="Diagnosis" sequence="204"/>
 
 </odoo>

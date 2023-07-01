@@ -2,7 +2,7 @@ from odoo import models, fields, _, api, exceptions
 
 
 class HospitalDiagnosis(models.Model):
-    _name = "hospital.diagnosis"  # diagnosis - диагноз, diagnoses - диагнозы
+    _name = "hospital.diagnosis"
     _description = "Diagnosis"
     _rec_name = "name_patient_id"
 
@@ -29,6 +29,11 @@ class HospitalDiagnosis(models.Model):
     )
     prescription = fields.Char(string="Doctor's appointment")
     comment = fields.Text(help="Commentary from the Doctor-Mentor")
+
+    # category_disease = fields.Char(
+    #     related="disease_ids.category_id.name",
+    #     store=True
+    # )
 
     def name_get(self):
         return [

@@ -83,7 +83,6 @@ class HospitalPatient(models.Model):
 
     def action_make_appointment_to_doctor_wizard(self):
         for patient in self:
-            print(patient.contact_person_id.name)
             return {
                 "name": _("Make appointment to doctor"),
                 "type": "ir.actions.act_window",

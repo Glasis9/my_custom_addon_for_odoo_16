@@ -26,8 +26,8 @@ class HospitalDoctor(models.Model):
         readonly=True,
         required=False,
         states={
-            "no intern": [("readonly", False), ("required", True)],
-            "intern": [("readonly", True), ("required", False)],
+            "no intern": [("readonly", False)],
+            "intern": [("readonly", True)],
         },
         domain=[("state", "=", "intern")]
     )
@@ -35,6 +35,7 @@ class HospitalDoctor(models.Model):
         string="Intern",
         selection=[("intern", "Intern"), ("no intern", "No intern")],
         default="no intern",
+        store=True,
     )
     doctor_mentor_one2many_id = fields.One2many(
         comodel_name="hospital.doctor",
@@ -44,6 +45,23 @@ class HospitalDoctor(models.Model):
         comodel_name="hospital.doctor",
         inverse_name="intern_id",
     )
+    patient_one2many_id = fields.One2many(
+        comodel_name="hospital.patient",
+        inverse_name="observing_doctor_id",
+    )
+
+    def action_make_appointment_to_doctor_wizard(self):
+        for doctor in self:
+            return {
+                "name": _("Make appointment to doctor"),
+                "type": "ir.actions.act_window",
+                "view_mode": "form",
+                "res_model": "hospital.add.making.appointment.wizard",
+                "target": "new",
+                "context": {
+                    "default_doctor_id": doctor.id,
+                },
+            }
 
     # @api.model
     # def create(self, vals_list):

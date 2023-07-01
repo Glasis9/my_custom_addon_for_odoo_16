@@ -27,17 +27,29 @@
         </field>
     </record>
 
+    <record id="hospital_allocation_doctor_view_calendar" model="ir.ui.view">
+        <field name="name">hospital.allocation.doctor.view.calendar</field>
+        <field name="model">hospital.allocation.doctor</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Allocation doctor" mode="month" date_start="date_time_receipt" date_stop="date_time_finish"
+            form_view_id="%(hr_hospital.hospital_allocation_doctor_view_form)d" event_open_popup="1">
+                <field name="doctor_id" avatar_field="photo"/>
+            </calendar>
+        </field>
+    </record>
+
     <record id="hospital_allocation_doctor_act_window"
             model="ir.actions.act_window">
         <field name="name">Allocation doctor</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.allocation.doctor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
     </record>
 
     <menuitem id="hospital_diagnosis_menu"
               action="hospital_allocation_doctor_act_window"
-              parent="hospital_catalog_menu"
-              name="Allocation doctor" sequence="207"/>
+              parent="hospital_doctor_menu"
+              name="Allocation doctor" sequence="202"/>
 
 </odoo>

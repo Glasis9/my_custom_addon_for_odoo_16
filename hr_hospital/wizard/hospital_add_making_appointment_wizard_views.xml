@@ -36,8 +36,8 @@
 
     <menuitem id ="open_wizard_make_appointment_menu"
               action="open_wizard_make_appointment"
-              parent="hospital_catalog_menu"
-              name="Make Appointment to doctor (wizard)"
-              sequence="208"/>
+              parent="hospital_patient_menu"
+              name="Make Appointment to doctor"
+              sequence="205"/>
 
 </odoo>

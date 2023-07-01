@@ -41,7 +41,7 @@
 
     <menuitem id="hospital_history_changing_personal_doctor_menu"
               action="hospital_history_changing_personal_doctor_act_window"
-              parent="hospital_catalog_menu"
-              name="History patient`s doctor" sequence="210"/>
+              parent="hospital_history_menu"
+              name="History patient`s doctor" sequence="201"/>
 
 </odoo>

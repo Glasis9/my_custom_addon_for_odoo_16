@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="types_analysis_bacteriological_studies_demo"
+            model="hospital.types.analysis">
+        <field name="name">Bacteriological studies</field>
+        <field name="price">10</field>
+    </record>
+
+    <record id="types_analysis_blood_analysis_demo"
+            model="hospital.types.analysis">
+        <field name="name">Blood analysis</field>
+    </record>
+    <record id="types_analysis_detailed_blood_tests_demo"
+            model="hospital.types.analysis">
+        <field name="name">Detailed blood test</field>
+        <field name="price">10</field>
+        <field name="parent_id" ref="hr_hospital.types_analysis_blood_analysis_demo"/>
+    </record>
+    <record id="types_analysis_blood_chemistry_demo"
+            model="hospital.types.analysis">
+        <field name="name">Blood chemistry</field>
+        <field name="price">15</field>
+        <field name="parent_id" ref="hr_hospital.types_analysis_detailed_blood_tests_demo"/>
+    </record>
+    <record id="types_analysis_general_blood_analysis_demo"
+            model="hospital.types.analysis">
+        <field name="name">General blood analysis</field>
+        <field name="price">8</field>
+        <field name="parent_id" ref="hr_hospital.types_analysis_blood_analysis_demo"/>
+    </record>
+
+    <record id="types_analysis_clinical_analysis_of_urine_demo"
+            model="hospital.types.analysis">
+        <field name="name">Clinical analysis of urine</field>
+        <field name="price">8</field>
+    </record>
+
+    <record id="types_analysis_enzyme_immunoassay_elisa_demo"
+            model="hospital.types.analysis">
+        <field name="name">Enzyme immunoassay (ELISA)</field>
+        <field name="price">12</field>
+    </record>
+
+    <record id="types_analysis_polymerase_chain_reaction_pcr_demo"
+            model="hospital.types.analysis">
+        <field name="name">Polymerase chain reaction (PCR)</field>
+        <field name="price">10</field>
+    </record>
+
+</odoo>

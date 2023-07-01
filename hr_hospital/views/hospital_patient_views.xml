@@ -37,12 +37,12 @@
                             <field name="name"/>
                             <field name="phone"/>
                             <field name="email"/>
-                            <field name="photo"/>
+                            <field name="birth_date"/>
+                            <field name="age"/>
                             <field name="gender"/>
                         </group>
                         <group>
-                            <field name="birth_date"/>
-                            <field name="age"/>
+                            <field name="photo" widget="image" class="oe_avatar oe_left"/>
                             <field name="passport_data"/>
                             <field name="contact_person_id"/>
                             <field name="observing_doctor_id"/>
@@ -68,9 +68,9 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hospital_patient_menu"
+    <menuitem id="hospital_patient_menu_view"
               action="hospital_patient_act_window"
-              parent="hospital_catalog_menu"
-              name="Patient" sequence="202"/>
+              parent="hospital_patient_menu"
+              name="Patient" sequence="201"/>
 
 </odoo>

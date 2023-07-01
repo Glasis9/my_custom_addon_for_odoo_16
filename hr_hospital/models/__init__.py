@@ -10,4 +10,5 @@ from . import (
     hospital_history_of_changing_a_personal_doctor,
     hospital_allocation_doctor,
     hospital_analysis,
+    hospital_types_analysis,
 )

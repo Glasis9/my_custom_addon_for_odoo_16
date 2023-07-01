@@ -45,8 +45,8 @@
 
     <menuitem id ="action_disease_report_wizard_menu"
               action="action_disease_report_wizard"
-              parent="hospital_catalog_menu"
-              name="Disease report (wizard)"
-              sequence="211"/>
+              parent="hospital_report_menu"
+              name="Disease report"
+              sequence="201"/>
 
 </odoo>

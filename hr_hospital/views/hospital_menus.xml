@@ -3,11 +3,35 @@
 
     <menuitem id="hospital_main_menu"
               web_icon="hospital,static/description/icon.png"
-              name="Hospital" sequence="300"/>
+              name="Hospital" sequence="500"/>
 
-    <menuitem id="hospital_catalog_menu"
+<!--    <menuitem id="hospital_catalog_menu"-->
+<!--              parent="hospital_main_menu"-->
+<!--              name="Other" sequence="100"/>-->
+
+    <menuitem id="hospital_doctor_menu"
               parent="hospital_main_menu"
-              name="Catalog" sequence="100"/>
+              name="Doctor" sequence="150"/>
+
+    <menuitem id="hospital_patient_menu"
+              parent="hospital_main_menu"
+              name="Patient" sequence="170"/>
+
+    <menuitem id="hospital_report_menu"
+              parent="hospital_main_menu"
+              name="Report" sequence="200"/>
+
+    <menuitem id="hospital_disease_menu"
+              parent="hospital_main_menu"
+              name="Disease" sequence="210"/>
+
+    <menuitem id="hospital_analysis_menu"
+              parent="hospital_main_menu"
+              name="Analysis" sequence="220"/>
+
+    <menuitem id="hospital_history_menu"
+              parent="hospital_main_menu"
+              name="History" sequence="230"/>
 
     <menuitem id="hospital_settings_main_menu"
               parent="hospital_main_menu"

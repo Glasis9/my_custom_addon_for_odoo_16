@@ -1,3 +1,5 @@
+import datetime
+
 from odoo import models, fields, api, exceptions, _
 
 
@@ -17,6 +19,15 @@ class HospitalAllocationDoctor(models.Model):
         string="Date and time of receipt",
         default=fields.date.today(),
     )
+    date_time_finish = fields.Datetime(
+        compute="_compute_finish_time"
+    )
+
+    @api.depends("date_time_finish")
+    def _compute_finish_time(self):
+        for obj in self:
+            obj.date_time_finish = obj.date_time_receipt + \
+                                   datetime.timedelta(minutes=30)
 
     @api.model
     def create(self, vals_list):
