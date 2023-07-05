@@ -16,5 +16,4 @@ class HospitalDisease(models.Model):
         return [
             (obj.id, "%s, %s" % (
                 obj.disease, f"category: {obj.category_id.name}"
-            )
-             ) for obj in self]
+            )) for obj in self]

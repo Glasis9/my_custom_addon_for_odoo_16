@@ -1,4 +1,4 @@
-from odoo import models, fields, api, _, exceptions
+from odoo import models, fields, _
 
 
 class HospitalDoctor(models.Model):
@@ -69,9 +69,8 @@ class HospitalDoctor(models.Model):
     #         ("id", "=", vals_list.get("doctor_mentor"))
     #     ])
     #     if vals_list.get("state") == "intern" and doctor.state == "intern":
-    #         raise exceptions.ValidationError(
-    #             _("An intern cannot be a mentor, Choose another doctor to be "
-    #               "your mentor"))
+    #         raise exceptions.ValidationError(_("An intern cannot be a mentor,
+    #         Choose another doctor to be your mentor"))
     #     return super(HospitalDoctor, self).create(vals_list)
 
     # def write(self, vals):

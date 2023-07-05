@@ -48,6 +48,6 @@ class HospitalDiagnosis(models.Model):
                     not diagnosis.comment:
                 raise exceptions.ValidationError(
                     _(f"Doctor-mentor: "
-                      f"{diagnosis.observing_doctor_id.doctor_mentor.name} must "
-                      f"add a comment to the diagnosis!")
+                      f"{diagnosis.observing_doctor_id.doctor_mentor.name} "
+                      f"must add a comment to the diagnosis!")
                 )

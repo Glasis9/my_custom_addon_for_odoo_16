@@ -55,8 +55,9 @@ class HospitalPatientVisit(models.Model):
     @api.depends("date_time_finish")
     def _compute_finish_time(self):
         for obj in self:
-            obj.date_time_finish = obj.date_time_start + \
-                                   datetime.timedelta(minutes=30)
+            obj.date_time_finish = obj.date_time_start + datetime.timedelta(
+                minutes=30
+            )
 
     @api.depends("date_time_start")
     def _compute_date(self):

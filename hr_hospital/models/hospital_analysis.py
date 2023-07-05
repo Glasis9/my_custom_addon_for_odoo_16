@@ -26,7 +26,9 @@ class HospitalAnalysis(models.Model):
     # def name_get(self):
     #     return [
     #         (obj.id, "%s, %s" % (
-    #             obj.analysis, f"types: {', '.join([type.name for type in obj.types_analysis_ids])}"
+    #             obj.analysis, f"types: {', '.join(
+    #     [type.name for type in obj.types_analysis_ids]
+    #     )}"
     #         )
     #          ) for obj in self]
 

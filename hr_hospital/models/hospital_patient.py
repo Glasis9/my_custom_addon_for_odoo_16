@@ -48,13 +48,11 @@ class HospitalPatient(models.Model):
 
     def write(self, vals):
         for patient in self:
-            self.env["hospital.history.changing.personal.doctor"].create(
-                {
-                    "choice_doctor_date_time": datetime.datetime.now(),
-                    "name_patient_id": patient.id,
-                    "name_doctor_id": patient.observing_doctor_id.id,
-                 }
-            )
+            self.env["hospital.history.changing.personal.doctor"].create({
+                "choice_doctor_date_time": datetime.datetime.now(),
+                "name_patient_id": patient.id,
+                "name_doctor_id": patient.observing_doctor_id.id,
+            })
         return super(HospitalPatient, self).write(vals)
 
     def action_change_doctor(self):

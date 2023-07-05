@@ -26,8 +26,9 @@ class HospitalAllocationDoctor(models.Model):
     @api.depends("date_time_finish")
     def _compute_finish_time(self):
         for obj in self:
-            obj.date_time_finish = obj.date_time_receipt + \
-                                   datetime.timedelta(minutes=30)
+            obj.date_time_finish = obj.date_time_receipt + datetime.timedelta(
+                minutes=30
+            )
 
     @api.model
     def create(self, vals_list):
@@ -51,7 +52,7 @@ class HospitalAllocationDoctor(models.Model):
                 ("id", "!=", obj.id)
             ])
             if len(res) > 0:
-                raise exceptions.ValidationError(
-                            _("This appointment time is already taken, "
-                              "please specify another"))
+                raise exceptions.ValidationError(_("This appointment time is "
+                                                   "already taken, please "
+                                                   "specify another"))
         return res

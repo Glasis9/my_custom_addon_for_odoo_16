@@ -69,19 +69,19 @@ class HospitalAddMakingAppointmentWizard(models.TransientModel):
                 raise exceptions.ValidationError(
                     _("Select an available date and time")
                 )
-            else:
-                obj.env["hospital.patient.visit"].create(
-                    {
-                        "name_doctor_id": obj.doctor_id.id,
-                        "date_time_start": obj.date_time_appointment,
-                        "name_patient_id": obj.name_patient_id.id,
-                        "by_appointment": True,
-                    }
-                )
-                return {
-                    "name": _("Patient visit"),
-                    "type": "ir.actions.act_window",
-                    "view_mode": "tree",
-                    "res_model": "hospital.patient.visit",
-                    "target": "current",
+
+            obj.env["hospital.patient.visit"].create(
+                {
+                    "name_doctor_id": obj.doctor_id.id,
+                    "date_time_start": obj.date_time_appointment,
+                    "name_patient_id": obj.name_patient_id.id,
+                    "by_appointment": True,
                 }
+            )
+            return {
+                "name": _("Patient visit"),
+                "type": "ir.actions.act_window",
+                "view_mode": "tree",
+                "res_model": "hospital.patient.visit",
+                "target": "current",
+            }
