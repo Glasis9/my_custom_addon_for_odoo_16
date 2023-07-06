@@ -23,6 +23,7 @@
         "wizard/hospital_add_making_appointment_wizard_views.xml",
         "wizard/hospital_change_doctor_wizard_views.xml",
         "wizard/hospital_disease_report_wizard_views.xml",
+        "report/hospital_doctor_report.xml",
     ],
     "depends": ["base"],
     "demo": [
@@ -36,6 +37,7 @@
         "demo/hospital_allocation_doctor_demo.xml",
         "demo/hospital_types_analysis_demo.xml",
         "demo/hospital_analysis_demo.xml",
+
     ],
     "application": True,
     "installable": True,

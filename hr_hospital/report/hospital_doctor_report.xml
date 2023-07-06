@@ -1,0 +1,187 @@
+<odoo>
+    <template id="doctor_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <img t-att-src="image_data_uri(doc.photo)" style="max-height:100pt;max-width:120%;float:right" alt="Photo doctor"/>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div style="text-align: center;">
+                            <h2><t t-out="doc.name"/></h2>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="row mt32 mb32">
+                            <div class="col-2">
+                                <strong>Speciality:</strong>
+                                <p t-field="doc.speciality"/>
+                            </div>
+                            <div class="col-4">
+                                <strong>Email:</strong>
+                                <p t-field="doc.email"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Phone:</strong>
+                                <p t-field="doc.phone"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>State:</strong>
+                                <p t-field="doc.state"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Gender:</strong>
+                                <p t-field="doc.gender"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Patient
+                                        </th>
+                                        <th style="border: 1px solid black;">
+                                        Diagnosis
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="doc.patient_one2many_id"
+                                           t-as="patient">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="patient.name" t-attf-style="background-color: yellow"/>
+                                                </td>
+                                                <t t-foreach="patient.diagnosis_id.disease_ids"
+                                                   t-as="disease">
+                                                    <td style="border: 1px solid black;" class="text-center">
+                                                        <div t-field="disease.disease" t-attf-style="background-color: red"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Mentor
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="doc.doctor_mentor_id"
+                                           t-as="mentor">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="mentor.name" t-attf-style="background-color: green"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Intern
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="doc.intern_id"
+                                           t-as="intern">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="intern.name" t-attf-style="background-color: blue"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div name="m_5_datetime" style="text-align: right;">
+                            <strong>
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H-%M')"/>
+                            </strong>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <data>
+        <record id="paperformat_lowmargin" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">1</field>
+            <field name="margin_bottom">1</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_report_doctor" model="ir.actions.report">
+            <field name="name">Doctor report</field>
+            <field name="model">hospital.doctor</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_hospital.doctor_report</field>
+            <field name="report_file">hr_hospital.doctor_report</field>
+            <field name="binding_model_id" ref="model_hospital_doctor"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_lowmargin"/>
+        </record>
+
+    </data>
+
+</odoo>

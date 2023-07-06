@@ -34,7 +34,7 @@
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_content oe_kanban_global_click">
-                            <div>
+                            <div class="o_kanban_card_header_title">
                                 <div>
                                     <field name="photo" widget="image" options="{'size': [90, 90]}"/>
                                 </div>
@@ -50,6 +50,52 @@
                                 <div>
                                     <field name="intern_id"/>
                                 </div>
+
+
+                                <div class="o_dropdown_kanban dropdown">
+                                    <a class="dropdown-toggle btn"
+                                       data-toggle="dropdown" href="#">
+                                        <span class="fa fa-ellipsis-v"
+                                              aria-hidden="true"/>
+                                    </a>
+                                    <div class="o_kanban_card_manage_setting row mt16">
+                                        <div class="dropdown-menu" role="menu">
+                                            <t t-if="widget.editable">
+                                                <a role="menuitem" type="edit"
+                                                   class="dropdown-item">Edit
+                                                </a>
+                                            </t>
+                                            <t t-if="widget.deletable">
+                                                <a role="menuitem"
+                                                   type="delete"
+                                                   class="dropdown-item">Delete
+                                                </a>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xs-12" style="height: 15px;"/>
+
+                                <div class="container o_kanban_card_content">
+                                    <div class="row">
+                                        <div class="col-5 o_kanban_primary_left">
+                                            <button class="btn btn-success"
+                                                    string="Make appointment"
+                                                    name="action_make_appointment_to_doctor_wizard"
+                                                    type="object">
+                                                <span>Make appointment</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-7 o_kanban_primary_right">
+                                            <div>Patients:</div>
+                                            <field name="patient_one2many_id"
+                                                   widget="many2many_tags"/>
+                                        </div>
+                                    </div>
+                                </div>
+
 
                             </div>
                         </div>
