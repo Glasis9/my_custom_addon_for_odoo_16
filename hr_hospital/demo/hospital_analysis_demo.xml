@@ -9,7 +9,7 @@
         ref('hr_hospital.types_analysis_blood_chemistry_demo'),
         ref('hr_hospital.types_analysis_general_blood_analysis_demo'),
         ])]"/>
-        <field name="date" eval="datetime(2023, 6, 28)"/>
+        <field name="date" eval="(datetime.today()).strftime('%Y-%m-%d')"/>
     </record>
 
     <record id="analysis_feces_scraping_sverepov_s_a_demo"
@@ -20,7 +20,7 @@
         ref('hr_hospital.types_analysis_bacteriological_studies_demo'),
         ref('hr_hospital.types_analysis_enzyme_immunoassay_elisa_demo'),
         ])]"/>
-        <field name="date" eval="datetime(2023, 6, 29)"/>
+        <field name="date" eval="(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d')"/>
     </record>
 
     <record id="analysis_blood_urine_feces_khvebel_a_g"
@@ -32,7 +32,7 @@
         ref('hr_hospital.types_analysis_enzyme_immunoassay_elisa_demo'),
         ref('hr_hospital.types_analysis_polymerase_chain_reaction_pcr_demo'),
         ])]"/>
-        <field name="date" eval="datetime(2023, 7, 1)"/>
+        <field name="date" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d')"/>
     </record>
 
 </odoo>

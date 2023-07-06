@@ -53,7 +53,7 @@
          <field name="model">hospital.analysis</field>
          <field name="arch" type="xml">
              <pivot display_quantity="0">
-                 <field name="date" interval="month" type="col"/>
+                 <field name="date" interval="day" type="col"/>
                  <field name="types_analysis_ids" type="row"/>
              </pivot>
          </field>

@@ -9,7 +9,7 @@
         ref('hr_hospital.disease_cold_demo'),
         ref('hr_hospital.disease_flu_demo'),
         ])]"/>
-        <field name="date_diagnosis" eval="datetime(2023, 6, 9)"/>
+        <field name="date_diagnosis" eval="(datetime.today() - timedelta(days=3)).strftime('%Y-%m-%d')"/>
         <field name="prescription">be treated</field>
     </record>
 
@@ -20,7 +20,7 @@
                ref="hr_hospital.doctor_safronova_v_i_demo"/>
         <field name="disease_ids" eval="[Command.link(
         ref('hr_hospital.disease_stroke_demo'))]"/>
-        <field name="date_diagnosis" eval="datetime(2023, 6, 10)"/>
+        <field name="date_diagnosis" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d')"/>
         <field name="prescription">be treated</field>
     </record>
 
@@ -31,7 +31,7 @@
                ref="hr_hospital.doctor_alaya_a_s_demo"/>
         <field name="disease_ids" eval="[Command.link(
         ref('hr_hospital.disease_candidiasis_demo'))]"/>
-        <field name="date_diagnosis" eval="datetime(2023, 6, 8)"/>
+        <field name="date_diagnosis" eval="(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d')"/>
         <field name="prescription">be treated</field>
     </record>
 

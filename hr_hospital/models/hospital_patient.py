@@ -69,25 +69,25 @@ class HospitalPatient(models.Model):
         }
 
     def action_history_patient_visit(self):
-        for patient in self:
-            return {
-                "name": _("History patient visit"),
-                "type": "ir.actions.act_window",
-                "view_mode": "tree",
-                "res_model": "hospital.patient.visit",
-                "target": "new",
-                "domain": [("name_patient_id.id", "=", patient.id)]
-            }
+        self.ensure_one()
+        return {
+            "name": _("History patient visit"),
+            "type": "ir.actions.act_window",
+            "view_mode": "tree",
+            "res_model": "hospital.patient.visit",
+            "target": "new",
+            "domain": [("name_patient_id.id", "=", self.id)]
+        }
 
     def action_make_appointment_to_doctor_wizard(self):
-        for patient in self:
-            return {
-                "name": _("Make appointment to doctor"),
-                "type": "ir.actions.act_window",
-                "view_mode": "form",
-                "res_model": "hospital.add.making.appointment.wizard",
-                "target": "new",
-                "context": {
-                    "default_name_patient_id": patient.id,
-                },
-            }
+        self.ensure_one()
+        return {
+            "name": _("Make appointment to doctor"),
+            "type": "ir.actions.act_window",
+            "view_mode": "form",
+            "res_model": "hospital.add.making.appointment.wizard",
+            "target": "new",
+            "context": {
+                "default_name_patient_id": self.id,
+            },
+        }

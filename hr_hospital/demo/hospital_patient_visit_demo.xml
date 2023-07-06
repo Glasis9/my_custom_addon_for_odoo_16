@@ -3,7 +3,7 @@
 
     <record id="patient_visit_date_2023_6_9_demo"
             model="hospital.patient.visit">
-        <field name="date_time_start" eval="datetime(2023, 6, 9, 3, 30, 0)"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=3)).strftime('%Y-%m-%d 05:30')"/>
         <field name="name_doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
         <field name="name_patient_id" ref="hr_hospital.patient_zhuk_e_s_demo"/>
         <field name="diagnosis_id"
@@ -12,7 +12,7 @@
 
     <record id="patient_visit_date_2023_6_10_demo"
             model="hospital.patient.visit">
-        <field name="date_time_start" eval="datetime(2023, 6, 10, 4, 0, 0)"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 04:00')"/>
         <field name="name_doctor_id"
                ref="hr_hospital.doctor_safronova_v_i_demo"/>
         <field name="name_patient_id"
@@ -23,7 +23,7 @@
 
     <record id="patient_visit_date_2023_6_8_demo"
             model="hospital.patient.visit">
-        <field name="date_time_start" eval="datetime(2023, 6, 8, 5, 0, 0)"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d 05:30')"/>
         <field name="name_doctor_id"
                ref="hr_hospital.doctor_alaya_a_s_demo"/>
         <field name="name_patient_id"

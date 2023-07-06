@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="allocation_doctor_boyko_s_a_9_0_0_demo" model="hospital.allocation.doctor">
+    <record id="allocation_doctor_boyko_s_a_6_30_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 30, 6, 0, 0)"/>
+        <field name="date_time_receipt" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 03:30')"/>
     </record>
 
-    <record id="allocation_doctor_boyko_s_a_10_0_0_demo" model="hospital.allocation.doctor">
+    <record id="allocation_doctor_boyko_s_a_7_30_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 30, 7, 0, 0)"/>
+        <field name="date_time_receipt" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 04:30')"/>
     </record>
 
-    <record id="allocation_doctor_boyko_s_a_11_0_0_demo" model="hospital.allocation.doctor">
+    <record id="allocation_doctor_boyko_s_a_8_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 30, 8, 0, 0)"/>
+        <field name="date_time_receipt" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 05:00')"/>
     </record>
 
-    <record id="allocation_doctor_safronova_v_i_10_0_0_demo" model="hospital.allocation.doctor">
+    <record id="allocation_doctor_safronova_v_i_7_0_demo" model="hospital.allocation.doctor">
         <field name="doctor_id" ref="hr_hospital.doctor_safronova_v_i_demo"/>
-        <field name="date_time_receipt" eval="datetime(2023, 6, 30, 7, 0, 0)"/>
+        <field name="date_time_receipt" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 04:00')"/>
+    </record>
+
+    <record id="allocation_doctor_safronova_v_i_8_0_demo" model="hospital.allocation.doctor">
+        <field name="doctor_id" ref="hr_hospital.doctor_safronova_v_i_demo"/>
+        <field name="date_time_receipt" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 05:00')"/>
     </record>
 
 </odoo>

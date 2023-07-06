@@ -51,17 +51,17 @@ class HospitalDoctor(models.Model):
     )
 
     def action_make_appointment_to_doctor_wizard(self):
-        for doctor in self:
-            return {
-                "name": _("Make appointment to doctor"),
-                "type": "ir.actions.act_window",
-                "view_mode": "form",
-                "res_model": "hospital.add.making.appointment.wizard",
-                "target": "new",
-                "context": {
-                    "default_doctor_id": doctor.id,
-                },
-            }
+        self.ensure_one()
+        return {
+            "name": _("Make appointment to doctor"),
+            "type": "ir.actions.act_window",
+            "view_mode": "form",
+            "res_model": "hospital.add.making.appointment.wizard",
+            "target": "new",
+            "context": {
+                "default_doctor_id": self.id,
+            },
+        }
 
     # @api.model
     # def create(self, vals_list):
