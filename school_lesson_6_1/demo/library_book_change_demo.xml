@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="library_book_call_ancestors_demo" model="library.book">
+        <field name="name">Поклик предків 2 (зміна)</field>
+        <field name="category_id"
+               ref="school_lesson_6_1.library_book_category_novel_demo">
+        </field>
+        <field name="user_id" ref="base.user_demo">
+        </field>
+    </record>
+
+    <delete id="library_book_twenty_thousand_leagues_under_water_demo" model="library.book"/>
+
+</odoo>
+

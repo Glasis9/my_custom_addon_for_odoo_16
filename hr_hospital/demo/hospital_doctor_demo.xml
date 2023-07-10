@@ -8,7 +8,6 @@
         <field name="photo" type="base64" file="hr_hospital/static/img/male_1.png"/>
         <field name="gender">male</field>
         <field name="speciality">Surgeon</field>
-        <field name="intern_id" ref="hr_hospital.doctor_barabashkin_a_d_intern_demo"/>
         <field name="state">no intern</field>
     </record>
 
@@ -41,6 +40,10 @@
         <field name="speciality">Therapist</field>
         <field name="doctor_mentor_id" ref="hr_hospital.doctor_boyko_s_a_demo"/>
         <field name="state">intern</field>
+    </record>
+
+    <record id="doctor_boyko_s_a_demo" model="hospital.doctor">
+        <field name="intern_id" ref="hr_hospital.doctor_barabashkin_a_d_intern_demo"/>
     </record>
 
 </odoo>
