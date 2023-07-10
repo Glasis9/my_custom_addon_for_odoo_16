@@ -11,7 +11,7 @@
         Lesson 6-1: Master and data data.
     """,
     'license': 'LGPL-3',
-    'author': 'Garazd Creation, Oleg Usenko',
+    'author': ['Garazd Creation', 'Oleg Usenko'],
     'website': 'https://garazd.biz',
     'depends': [
         'base',
