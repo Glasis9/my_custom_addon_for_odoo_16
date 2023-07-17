@@ -4,7 +4,7 @@
 
 {
     'name': 'School Lesson 6 3',
-    'version': '15.0.0.0.1',
+    'version': '15.0.2.0.0',
     'category': 'Extra Tools',
     'summary': """
         Odoo School
