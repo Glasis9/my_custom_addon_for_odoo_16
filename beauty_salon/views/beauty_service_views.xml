@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="beauty_service_view_tree" model="ir.ui.view">
+        <field name="name">beauty.service.view.tree</field>
+        <field name="model">beauty.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="service"/>
+                <field name="category_id"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_service_view_form" model="ir.ui.view">
+        <field name="name">beauty.service.form</field>
+        <field name="model">beauty.service</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="service"/>
+                        <field name="category_id"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_service_view_search" model="ir.ui.view">
+        <field name="name">beauty.service.search</field>
+        <field name="model">beauty.service</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="category_id"/>
+                <searchpanel>
+                    <field name="category_id" hierarchize="1" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="beauty_service_act_window" model="ir.actions.act_window">
+        <field name="name">Service</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.service</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <menuitem id="beauty_service_menu_view"
+              action="beauty_service_act_window"
+              parent="beauty_salon_service_menu"
+              name="Service" sequence="12"/>
+
+</odoo>

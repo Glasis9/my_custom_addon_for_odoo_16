@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="beauty_master_schedule_anastasia_u_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_anastasia_u_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_u_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 15:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_alexandra_m_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_alexandra_m_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 11:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+    <record id="beauty_master_schedule_alexandra_m_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 17:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_anna_smirnova_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_anna_smirnova_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 15:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anna_smirnova_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_anastasia_k_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_anastasia_k_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=5)).strftime('%Y-%m-%d 05:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=5)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=5)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=5)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_anastasia_k_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=5)).strftime('%Y-%m-%d 11:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_irina_l_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 04:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 05:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_irina_l_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+    <record id="beauty_master_schedule_irina_l_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 17:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_igor_sokolov_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 11:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 15:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_igor_sokolov_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_igor_sokolov_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 16:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_yulia_kovaleva_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 04:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_yulia_kovaleva_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 13:00')"/>
+    </record>
+    <record id="beauty_master_schedule_yulia_kovaleva_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_olga_petrova_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 05:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_olga_petrova_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 08:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_olga_petrova_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=3)).strftime('%Y-%m-%d 14:00')"/>
+    </record>
+
+
+
+    <record id="beauty_master_schedule_denis_smirnov_01_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_02_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_03_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_04_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_05_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=2)).strftime('%Y-%m-%d 15:00')"/>
+    </record>
+
+    <record id="beauty_master_schedule_denis_smirnov_06_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 06:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_07_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 07:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_08_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 09:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_09_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 10:00')"/>
+    </record>
+    <record id="beauty_master_schedule_denis_smirnov_10_demo" model="beauty.master.schedule">
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="free_date_time_start" eval="(datetime.today() + timedelta(days=4)).strftime('%Y-%m-%d 12:00')"/>
+    </record>
+
+</odoo>

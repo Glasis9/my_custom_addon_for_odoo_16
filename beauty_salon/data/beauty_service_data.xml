@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="service_biorevitalization_data" model="beauty.service">
+        <field name="service">Biorevitalization</field>
+        <field name="category_id" ref="beauty_salon.service_category_beautician_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_botox_injections_data" model="beauty.service">
+        <field name="service">Botox injections</field>
+        <field name="category_id" ref="beauty_salon.service_category_beautician_data">
+        </field>
+        <field name="price">25</field>
+    </record>
+
+    <record id="service_lip_augmentation_data" model="beauty.service">
+        <field name="service">Lip augmentation</field>
+        <field name="category_id" ref="beauty_salon.service_category_beautician_data">
+        </field>
+        <field name="price">15</field>
+    </record>
+
+
+    <record id="service_eyebrow_coloring_data" model="beauty.service">
+        <field name="service">Eyebrow coloring</field>
+        <field name="category_id" ref="beauty_salon.service_category_browist_data">
+        </field>
+        <field name="price">10</field>
+    </record>
+
+    <record id="service_eyebrow_correction_data" model="beauty.service">
+        <field name="service">Eyebrow correction</field>
+        <field name="category_id" ref="beauty_salon.service_category_browist_data">
+        </field>
+        <field name="price">5</field>
+    </record>
+
+
+    <record id="service_hair_dyeing_data" model="beauty.service">
+        <field name="service">Hair dyeing</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">60</field>
+    </record>
+
+    <record id="service_hair_extension_data" model="beauty.service">
+        <field name="service">Hair extension</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">50</field>
+    </record>
+
+    <record id="service_hair_straightening_data" model="beauty.service">
+        <field name="service">Hair straightening</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">25</field>
+    </record>
+
+    <record id="service_hair_waving_data" model="beauty.service">
+        <field name="service">Hair waving</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">25</field>
+    </record>
+
+    <record id="service_haircut_data" model="beauty.service">
+        <field name="service">Haircut</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">10</field>
+    </record>
+
+    <record id="service_laying_data" model="beauty.service">
+        <field name="service">Laying</field>
+        <field name="category_id" ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+        <field name="price">15</field>
+    </record>
+
+
+    <record id="service_nail_correction_data" model="beauty.service">
+        <field name="service">Nail correction</field>
+        <field name="category_id" ref="beauty_salon.service_category_manicurist_data">
+        </field>
+        <field name="price">10</field>
+    </record>
+
+    <record id="service_nail_extension_data" model="beauty.service">
+        <field name="service">Nail extension</field>
+        <field name="category_id" ref="beauty_salon.service_category_manicurist_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_pedicure_data" model="beauty.service">
+        <field name="service">Pedicure</field>
+        <field name="category_id" ref="beauty_salon.service_category_manicurist_data">
+        </field>
+        <field name="price">15</field>
+    </record>
+
+    <record id="service_regular_manicure_data" model="beauty.service">
+        <field name="service">Regular manicure</field>
+        <field name="category_id" ref="beauty_salon.service_category_manicurist_data">
+        </field>
+        <field name="price">15</field>
+    </record>
+
+
+    <record id="service_anti_cellulite_massage_data" model="beauty.service">
+        <field name="service">Anti-cellulite massage</field>
+        <field name="category_id" ref="beauty_salon.service_category_masseur_data">
+        </field>
+        <field name="price">18</field>
+    </record>
+
+    <record id="service_massotherapy_data" model="beauty.service">
+        <field name="service">Massotherapy</field>
+        <field name="category_id" ref="beauty_salon.service_category_masseur_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_regular_massage_data" model="beauty.service">
+        <field name="service">Regular massage</field>
+        <field name="category_id" ref="beauty_salon.service_category_masseur_data">
+        </field>
+        <field name="price">15</field>
+    </record>
+
+
+    <record id="service_business_makeup_data" model="beauty.service">
+        <field name="service">Business makeup</field>
+        <field name="category_id" ref="beauty_salon.service_category_visagiste_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_evening_make_up_data" model="beauty.service">
+        <field name="service">Evening make-up</field>
+        <field name="category_id" ref="beauty_salon.service_category_visagiste_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_graduation_makeup_data" model="beauty.service">
+        <field name="service">Graduation makeup</field>
+        <field name="category_id" ref="beauty_salon.service_category_visagiste_data">
+        </field>
+        <field name="price">20</field>
+    </record>
+
+    <record id="service_wedding_make_up_data" model="beauty.service">
+        <field name="service">Wedding make-up</field>
+        <field name="category_id" ref="beauty_salon.service_category_visagiste_data">
+        </field>
+        <field name="price">30</field>
+    </record>
+
+</odoo>

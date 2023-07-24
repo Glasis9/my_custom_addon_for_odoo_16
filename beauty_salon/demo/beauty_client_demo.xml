@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="client_zhuk_elena_demo" model="beauty.client">
+        <field name="name">Zhuk Elena</field>
+        <field name="phone">0983927864</field>
+        <field name="email">zhuk_elena@gmail.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1990, 8, 23)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_1.png"/>
+    </record>
+
+    <record id="client_ivanova_maria_demo" model="beauty.client">
+        <field name="name">Ivanova Maria</field>
+        <field name="phone">0951234567</field>
+        <field name="email">ivanova_maria@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1985, 5, 12)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_2.png"/>
+    </record>
+
+    <record id="client_kozlova_anastasia_demo" model="beauty.client">
+        <field name="name">Kozlova Anastasia</field>
+        <field name="phone">0979876543</field>
+        <field name="email">kozlova_anastasia@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1992, 11, 4)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_3.png"/>
+    </record>
+
+    <record id="client_gavrilova_ekaterina_demo" model="beauty.client">
+        <field name="name">Gavrilova Ekaterina</field>
+        <field name="phone">0967654321</field>
+        <field name="email">gavrilova_ekaterina@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1988, 9, 15)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_4.png"/>
+    </record>
+
+    <record id="client_smirnova_olga_demo" model="beauty.client">
+        <field name="name">Smirnova Olga</field>
+        <field name="phone">0998765432</field>
+        <field name="email">smirnova_olga@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1995, 2, 8)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_5.png"/>
+    </record>
+
+    <record id="client_petrova_mariya_demo" model="beauty.client">
+        <field name="name">Petrova Mariya</field>
+        <field name="phone">0982345678</field>
+        <field name="email">petrova_mariya@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1994, 7, 29)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_6.png"/>
+    </record>
+
+    <record id="client_sokolova_natalia_demo" model="beauty.client">
+        <field name="name">Sokolova Natalia</field>
+        <field name="phone">0987654321</field>
+        <field name="email">sokolova_natalia@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1991, 4, 17)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_7.png"/>
+    </record>
+
+    <record id="client_kuznetsova_anna_demo" model="beauty.client">
+        <field name="name">Kuznetsova Anna</field>
+        <field name="phone">0978765432</field>
+        <field name="email">kuznetsova_anna@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1989, 12, 6)"/>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/client_8.png"/>
+    </record>
+
+</odoo>

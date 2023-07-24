@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="beauty_salon_anastasia_u_demo" model="beauty.master">
+        <field name="name">Anastasia Usenko</field>
+        <field name="phone">0972859378</field>
+        <field name="email">anastasia_u@gmail.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(2000, 12, 6)"/>
+        <field name="speciality">hairdresser</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_1.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_alexandra_m_demo" model="beauty.master">
+        <field name="name">Alexandra Markova</field>
+        <field name="phone">0951234567</field>
+        <field name="email">alexandra_markova@gmail.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1991, 7, 29)"/>
+        <field name="speciality">browist</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_2.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_anna_smirnova_demo" model="beauty.master">
+        <field name="name">Anna Smirnova</field>
+        <field name="phone">0992345678</field>
+        <field name="email">anna_smirnova@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1991, 4, 17)"/>
+        <field name="speciality">visagiste</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_3.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_anastasia_k_demo" model="beauty.master">
+        <field name="name">Anastasia Kuznetsova</field>
+        <field name="phone">0958765432</field>
+        <field name="email">anastasia_k@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1994, 9, 3)"/>
+        <field name="speciality">manicurist</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_4.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_irina_l_demo" model="beauty.master">
+        <field name="name">Irina Levin</field>
+        <field name="phone">0976543210</field>
+        <field name="email">irina_levin@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1996, 8, 23)"/>
+        <field name="speciality">manicurist</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_5.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_igor_sokolov_demo" model="beauty.master">
+        <field name="name">Igor Sokolov</field>
+        <field name="phone">0987654321</field>
+        <field name="email">igor_sokolov@example.com</field>
+        <field name="gender">male</field>
+        <field name="birth_date" eval="datetime(1991, 5, 12)"/>
+        <field name="speciality">masseur</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/male/male_3.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_yulia_kovaleva_demo" model="beauty.master">
+        <field name="name">Yulia Kovaleva</field>
+        <field name="phone">0967654321</field>
+        <field name="email">kovaleva_yulia@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1995, 11, 4)"/>
+        <field name="speciality">beautician</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_6.png"/>
+        <field name="state">master</field>
+    </record>
+
+    <record id="beauty_salon_olga_petrova_demo" model="beauty.master">
+        <field name="name">Olga Petrova</field>
+        <field name="phone">0987654321</field>
+        <field name="email">olga_petrova@example.com</field>
+        <field name="gender">female</field>
+        <field name="birth_date" eval="datetime(1988, 9, 15)"/>
+        <field name="speciality">hairdresser</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/female/female_7.png"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="state">trainee</field>
+    </record>
+
+    <record id="beauty_salon_anastasia_u_demo" model="beauty.master">
+        <field name="trainee_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+    </record>
+
+    <record id="beauty_salon_denis_smirnov_demo" model="beauty.master">
+        <field name="name">Denis Smirnov</field>
+        <field name="phone">0976543210</field>
+        <field name="email">denis_smirnov@example.com</field>
+        <field name="gender">male</field>
+        <field name="birth_date" eval="datetime(1996, 2, 8)"/>
+        <field name="speciality">masseur</field>
+        <field name="image_1920" type="base64" file="beauty_salon/static/img/male/male_2.png"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="state">trainee</field>
+    </record>
+
+    <record id="beauty_salon_igor_sokolov_demo" model="beauty.master">
+        <field name="trainee_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+    </record>
+
+</odoo>

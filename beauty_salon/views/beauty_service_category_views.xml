@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="beauty_service_category_view_tree" model="ir.ui.view">
+        <field name="name">beauty.service.category.view.tree</field>
+        <field name="model">beauty.service.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name"/>
+                <field name="service_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_service_category_view_form" model="ir.ui.view">
+        <field name="name">beauty.service.category.view.form</field>
+        <field name="model">beauty.service.category</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_service_category_act_window" model="ir.actions.act_window">
+        <field name="name">Category service</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.service.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="beauty_service_category_menu"
+              action="beauty_service_category_act_window"
+              parent="beauty_salon_service_menu"
+              name="Service category" sequence="11"/>
+
+</odoo>

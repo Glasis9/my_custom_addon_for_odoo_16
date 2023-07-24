@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_client_visit_report_wizard_view_form" model="ir.ui.view">
+        <field name="name">beauty.client.visit.report.wizard.view.form</field>
+        <field name="model">beauty.client.visit.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>/>
+                    <field name="month_year"/>
+                    <field name="service_id"/>
+                    <field name="client_id"/>
+                    <field name="master_id"/>
+                </group>
+                <footer>
+                    <button name="action_client_visit_report"
+                        string="Report"
+                        type="object"
+                        icon="fa-plus"
+                        class="btn-primary"
+                    />
+                    <button special="cancel" class="oe_link" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_client_visit_report_wizard" model="ir.actions.act_window">
+        <field name="name">Client visit report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.client.visit.report.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id ="action_client_visit_report_wizard_menu"
+              action="action_client_visit_report_wizard"
+              parent="beauty_salon_client_visit_menu"
+              name="Client visit report" sequence="22"/>
+
+</odoo>

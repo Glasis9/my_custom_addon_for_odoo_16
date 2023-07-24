@@ -1,0 +1,187 @@
+<odoo>
+    <template id="master_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="master">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <img t-att-src="image_data_uri(master.avatar_256)" style="max-height:100pt;max-width:120%;float:right" alt="Photo master"/>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div style="text-align: center;">
+                            <h2><t t-out="master.name"/></h2>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="row mt32 mb32">
+                            <div class="col-2">
+                                <strong>Speciality:</strong>
+                                <p t-field="master.speciality"/>
+                            </div>
+                            <div class="col-4">
+                                <strong>Email:</strong>
+                                <p t-field="master.email"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Phone:</strong>
+                                <p t-field="master.phone"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>State:</strong>
+                                <p t-field="master.state"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Gender:</strong>
+                                <p t-field="master.gender"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Client
+                                        </th>
+                                        <th style="border: 1px solid black;">
+                                        Service
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="master.client_one2many_id"
+                                           t-as="client">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="client.client_id.name" t-attf-style="background-color: yellow"/>
+                                                </td>
+                                                <t t-foreach="client.service_id"
+                                                   t-as="service">
+                                                    <td style="border: 1px solid black;" class="text-center">
+                                                        <div t-field="service.service" t-attf-style="background-color: red"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Master
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="master.master_id"
+                                           t-as="master">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="master.name" t-attf-style="background-color: green"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <table class="table-bordered"
+                                   style="border: 1px solid black;"
+                                   width="100%">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th style="border: 1px solid black;">
+                                        Trainee
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <t t-foreach="master.trainee_id"
+                                           t-as="trainee">
+                                            <tr>
+                                                <td style="border: 1px solid black;" class="text-center">
+                                                    <div t-field="trainee.name" t-attf-style="background-color: blue"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div name="m_5_datetime" style="text-align: right;">
+                            <strong>
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H-%M')"/>
+                            </strong>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <data>
+        <record id="paperformat_lowmargin" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">1</field>
+            <field name="margin_bottom">1</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_report_master" model="ir.actions.report">
+            <field name="name">Master report</field>
+            <field name="model">beauty.master</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">beauty_salon.master_report</field>
+            <field name="report_file">beauty_salon.master_report</field>
+            <field name="binding_model_id" ref="model_beauty_master"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_lowmargin"/>
+        </record>
+
+    </data>
+
+</odoo>

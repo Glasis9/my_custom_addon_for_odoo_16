@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="client_visit_zhuk_elena_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_dyeing_data"/>
+        <field name="client_id" ref="beauty_salon.client_zhuk_elena_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=10)).strftime('%Y-%m-%d 05:30')"/>
+        <field name="spent_time">2.5</field>
+    </record>
+    <record id="client_visit_zhuk_elena_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_dyeing_data"/>
+        <field name="client_id" ref="beauty_salon.client_zhuk_elena_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=3)).strftime('%Y-%m-%d 08:30')"/>
+        <field name="spent_time">3.5</field>
+    </record>
+    <record id="client_visit_zhuk_elena_03_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_wedding_make_up_data"/>
+        <field name="client_id" ref="beauty_salon.client_zhuk_elena_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 04:30')"/>
+        <field name="spent_time">2</field>
+    </record>
+    <record id="client_visit_zhuk_elena_04_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_regular_massage_data"/>
+        <field name="client_id" ref="beauty_salon.client_zhuk_elena_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d 09:00')"/>
+        <field name="spent_time">1</field>
+    </record>
+    <record id="client_visit_zhuk_elena_05_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_nail_extension_data"/>
+        <field name="client_id" ref="beauty_salon.client_zhuk_elena_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d 10:00')"/>
+        <field name="spent_time">3</field>
+    </record>
+
+
+    <record id="client_visit_ivanova_maria_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_extension_data"/>
+        <field name="client_id" ref="beauty_salon.client_ivanova_maria_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=7)).strftime('%Y-%m-%d 11:00')"/>
+        <field name="spent_time">4</field>
+    </record>
+    <record id="client_visit_ivanova_maria_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_dyeing_data"/>
+        <field name="client_id" ref="beauty_salon.client_ivanova_maria_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=3)).strftime('%Y-%m-%d 09:00')"/>
+        <field name="spent_time">3</field>
+    </record>
+
+
+    <record id="client_visit_kozlova_anastasia_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_anti_cellulite_massage_data"/>
+        <field name="client_id" ref="beauty_salon.client_kozlova_anastasia_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_denis_smirnov_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=4)).strftime('%Y-%m-%d 12:00')"/>
+        <field name="spent_time">1.5</field>
+    </record>
+    <record id="client_visit_kozlova_anastasia_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_evening_make_up_data"/>
+        <field name="client_id" ref="beauty_salon.client_kozlova_anastasia_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anna_smirnova_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=3)).strftime('%Y-%m-%d 16:00')"/>
+        <field name="spent_time">1</field>
+    </record>
+    
+    
+    <record id="client_visit_gavrilova_ekaterina_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_lip_augmentation_data"/>
+        <field name="client_id" ref="beauty_salon.client_gavrilova_ekaterina_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 13:00')"/>
+        <field name="spent_time">30</field>
+    </record>
+    <record id="client_visit_gavrilova_ekaterina_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_botox_injections_data"/>
+        <field name="client_id" ref="beauty_salon.client_gavrilova_ekaterina_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_yulia_kovaleva_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 13:30')"/>
+        <field name="spent_time">1</field>
+    </record>
+    <record id="client_visit_gavrilova_ekaterina_03_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_dyeing_data"/>
+        <field name="client_id" ref="beauty_salon.client_gavrilova_ekaterina_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 14:30')"/>
+        <field name="spent_time">3</field>
+    </record>
+    <record id="client_visit_gavrilova_ekaterina_04_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_eyebrow_coloring_data"/>
+        <field name="client_id" ref="beauty_salon.client_gavrilova_ekaterina_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_alexandra_m_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 10:00')"/>
+        <field name="spent_time">3</field>
+    </record>
+    
+    
+    <record id="client_visit_smirnova_olga_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_pedicure_data"/>
+        <field name="client_id" ref="beauty_salon.client_smirnova_olga_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=4)).strftime('%Y-%m-%d 11:00')"/>
+        <field name="spent_time">2</field>
+    </record>
+    <record id="client_visit_smirnova_olga_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_regular_manicure_data"/>
+        <field name="client_id" ref="beauty_salon.client_smirnova_olga_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_irina_l_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=4)).strftime('%Y-%m-%d 13:00')"/>
+        <field name="spent_time">2</field>
+    </record>
+    
+    
+    <record id="client_visit_petrova_mariya_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_massotherapy_data"/>
+        <field name="client_id" ref="beauty_salon.client_petrova_mariya_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=4)).strftime('%Y-%m-%d 10:00')"/>
+        <field name="spent_time">2</field>
+    </record>
+    <record id="client_visit_petrova_mariya_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_evening_make_up_data"/>
+        <field name="client_id" ref="beauty_salon.client_petrova_mariya_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_igor_sokolov_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d 13:00')"/>
+        <field name="spent_time">1</field>
+    </record>
+    
+    
+    <record id="client_visit_sokolova_natalia_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_nail_correction_data"/>
+        <field name="client_id" ref="beauty_salon.client_sokolova_natalia_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=6)).strftime('%Y-%m-%d 15:00')"/>
+        <field name="spent_time">1.5</field>
+    </record>
+    <record id="client_visit_sokolova_natalia_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_haircut_data"/>
+        <field name="client_id" ref="beauty_salon.client_sokolova_natalia_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_olga_petrova_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=5)).strftime('%Y-%m-%d 16:00')"/>
+        <field name="spent_time">1</field>
+    </record>
+    
+    
+    <record id="client_visit_kuznetsova_anna_01_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_hair_straightening_data"/>
+        <field name="client_id" ref="beauty_salon.client_kuznetsova_anna_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_u_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=7)).strftime('%Y-%m-%d 11:00')"/>
+        <field name="spent_time">1.5</field>
+    </record>
+    <record id="client_visit_kuznetsova_anna_02_demo" model="beauty.client.visit">
+        <field name="service_id" ref="beauty_salon.service_nail_extension_data"/>
+        <field name="client_id" ref="beauty_salon.client_kuznetsova_anna_demo"/>
+        <field name="master_id" ref="beauty_salon.beauty_salon_anastasia_k_demo"/>
+        <field name="date_time_start" eval="(datetime.today() - timedelta(days=5)).strftime('%Y-%m-%d 08:00')"/>
+        <field name="spent_time">2</field>
+    </record>
+</odoo>

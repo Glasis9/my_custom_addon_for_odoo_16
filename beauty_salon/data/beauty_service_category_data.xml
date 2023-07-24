@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="service_category_beautician_data"
+            model="beauty.service.category">
+        <field name="name">Beautician</field>
+    </record>
+    <record id="service_category_biorevitalization_data"
+            model="beauty.service.category">
+        <field name="name">Biorevitalization</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_beautician_data">
+        </field>
+    </record>
+    <record id="service_category_botox_injections_data"
+            model="beauty.service.category">
+        <field name="name">Botox injections</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_beautician_data">
+        </field>
+    </record>
+    <record id="service_category_lip_augmentation_data"
+            model="beauty.service.category">
+        <field name="name">Lip augmentation</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_beautician_data">
+        </field>
+    </record>
+
+    <record id="service_category_browist_data"
+            model="beauty.service.category">
+        <field name="name">Browist</field>
+    </record>
+    <record id="service_category_eyebrow_coloring_data"
+            model="beauty.service.category">
+        <field name="name">Eyebrow coloring</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_browist_data">
+        </field>
+    </record>
+    <record id="service_category_eyebrow_correction_data"
+            model="beauty.service.category">
+        <field name="name">Eyebrow correction</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_browist_data">
+        </field>
+    </record>
+
+    <record id="service_category_hairdresser_work_data"
+            model="beauty.service.category">
+        <field name="name">Hairdresser</field>
+    </record>
+    <record id="service_category_hair_dyeing_data"
+            model="beauty.service.category">
+        <field name="name">Hair dyeing</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+    <record id="service_category_hair_extension_data"
+            model="beauty.service.category">
+        <field name="name">Hair extension</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+    <record id="service_category_hair_straightening_data"
+            model="beauty.service.category">
+        <field name="name">Hair straightening</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+    <record id="service_category_hair_waving_data"
+            model="beauty.service.category">
+        <field name="name">Hair waving</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+    <record id="service_category_haircut_data"
+            model="beauty.service.category">
+        <field name="name">Haircut</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+    <record id="service_category_laying_data"
+            model="beauty.service.category">
+        <field name="name">Laying</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_hairdresser_work_data">
+        </field>
+    </record>
+
+    <record id="service_category_manicurist_data"
+            model="beauty.service.category">
+        <field name="name">Manicurist</field>
+    </record>
+    <record id="service_category_nail_correction_data"
+            model="beauty.service.category">
+        <field name="name">Nail correction</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_manicurist_data">
+        </field>
+    </record>
+    <record id="service_category_nail_extension_data"
+            model="beauty.service.category">
+        <field name="name">Nail extension</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_manicurist_data">
+        </field>
+    </record>
+    <record id="service_category_pedicure_data"
+            model="beauty.service.category">
+        <field name="name">Pedicure</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_manicurist_data">
+        </field>
+    </record>
+    <record id="service_category_regular_manicure_data"
+            model="beauty.service.category">
+        <field name="name">Regular manicure</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_manicurist_data">
+        </field>
+    </record>
+
+    <record id="service_category_masseur_data"
+            model="beauty.service.category">
+        <field name="name">Masseur</field>
+    </record>
+    <record id="service_category_anti_cellulite_massage_data"
+            model="beauty.service.category">
+        <field name="name">Anti-cellulite massage</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_masseur_data">
+        </field>
+    </record>
+    <record id="service_category_massotherapy_data"
+            model="beauty.service.category">
+        <field name="name">Massotherapy</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_masseur_data">
+        </field>
+    </record>
+    <record id="service_category_regular_massage_data"
+            model="beauty.service.category">
+        <field name="name">Regular massage</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_masseur_data">
+        </field>
+    </record>
+
+    <record id="service_category_visagiste_data"
+            model="beauty.service.category">
+        <field name="name">Visagiste</field>
+    </record>
+    <record id="service_category_business_makeup_data"
+            model="beauty.service.category">
+        <field name="name">Business makeup</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_visagiste_data">
+        </field>
+    </record>
+    <record id="service_category_evening_make_up_data"
+            model="beauty.service.category">
+        <field name="name">Evening make-up</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_visagiste_data">
+        </field>
+    </record>
+    <record id="service_category_graduation_makeup_data"
+            model="beauty.service.category">
+        <field name="name">Graduation makeup</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_visagiste_data">
+        </field>
+    </record>
+    <record id="service_category_wedding_make_up_data"
+            model="beauty.service.category">
+        <field name="name">Wedding make-up</field>
+        <field name="parent_id"
+               ref="beauty_salon.service_category_visagiste_data">
+        </field>
+    </record>
+</odoo>

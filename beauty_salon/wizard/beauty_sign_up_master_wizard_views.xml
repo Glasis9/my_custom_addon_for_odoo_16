@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_sign_up_master_wizard_view_form" model="ir.ui.view">
+        <field name="name">beauty.sign.up.master.wizard.view.form</field>
+        <field name="model">beauty.sign.up.master.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="main">
+                    <group name="first">
+                        <field name="client_id"/>
+                        <field name="service_id" attrs="{'invisible': [('client_id', '=', False)]}"/>
+                        <field name="master_id" attrs="{'invisible': [('service_id', '=', False)]}"/>
+                        <field name="speciality" invisible="1"/>
+                    </group>
+                    <group name="second">
+                        <field name="available_date_time"/>
+                        <field name="date_time_record"/>
+                        <field name="price"/>
+                        <field name="by_appointment" readonly="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="sign_up_for_master"
+                        string="Sign up"
+                        type="object"
+                        icon="fa-plus"
+                        class="btn-success"
+                    />
+                    <button special="cancel" class="oe_link btn-warning" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sign_up_master_open_wizard" model="ir.actions.act_window">
+        <field name="name">Sign up for a master</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.sign.up.master.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id ="sign_up_master_open_wizard_menu"
+              action="sign_up_master_open_wizard"
+              parent="beauty_salon_master_schedule_menu"
+              name="Sign up for a master"
+              sequence="5"/>
+
+</odoo>

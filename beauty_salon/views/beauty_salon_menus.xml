@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="beauty_salon_main_menu"
+              web_icon="beauty_salon,static/description/icon_salon.png"
+              name="Beauty salon" sequence="1"/>
+
+    <menuitem id="beauty_salon_master_schedule_menu"
+              parent="beauty_salon_main_menu"
+              name="Master" sequence="2"/>
+
+    <menuitem id="beauty_salon_service_menu"
+              parent="beauty_salon_main_menu"
+              name="Service" sequence="10"/>
+
+    <menuitem id="beauty_salon_client_visit_menu"
+              parent="beauty_salon_main_menu"
+              name="Client visit" sequence="20"/>
+
+    <menuitem id="settings_main_menu"
+              parent="beauty_salon_main_menu"
+              name="Settings" sequence="9999"/>
+
+</odoo>

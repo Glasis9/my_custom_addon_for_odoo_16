@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="beauty_client_visit_view_tree" model="ir.ui.view">
+        <field name="name">beauty.client.visit.view.tree</field>
+        <field name="model">beauty.client.visit</field>
+        <field name="arch" type="xml">
+            <tree import="false">
+                <field name="master_id"  widget="many2one_avatar_user"/>
+                <field name="client_id"  widget="many2one_avatar_user"/>
+                <field name="service_id"/>
+                <field name="date_time_start"/>
+                <field name="spent_time"/>
+                <field name="date_time_finish"/>
+                <field name="state"/>
+                <field name="price"/>
+                <field name="by_appointment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_client_visit_view_form" model="ir.ui.view">
+        <field name="name">beauty.client.visit.view.form</field>
+        <field name="model">beauty.client.visit</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" import="false">
+                <sheet>
+                    <group name="main">
+                        <group name="first">
+                            <field name="client_id"/>
+                            <field name="service_id" attrs="{'invisible': [('client_id', '=', False)]}"/>
+                            <field name="master_id" attrs="{'invisible': [('service_id', '=', False)]}"/>
+                            <field name="speciality" invisible="1"/>
+                        </group>
+                        <group name="second">
+                            <field name="date_time_start"/>
+                            <field name="spent_time"/>
+                            <field name="date_time_finish"/>
+                            <field name="state"/>
+                            <field name="price"/>
+                            <field name="by_appointment" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_client_visit_view_search" model="ir.ui.view">
+        <field name="name">beauty.client.visit.view.search</field>
+        <field name="model">beauty.client.visit</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="client_id" filter_domain="[('client_id.name','ilike',self)]"/>
+                <field name="master_id" filter_domain="[('master_id.name','ilike',self)]"/>
+                <field name="service_id" filter_domain="[('service_id.service','ilike',self)]"/>
+
+                <filter name="filter_date_time_start" date="date_time_start" string="Date visit"/>
+                <filter name="groupby_service_id" string="Service" context="{'group_by': 'service_id'}"/>
+                <filter name="groupby_master_id" string="Master" context="{'group_by': 'master_id'}"/>
+                <filter name="groupby_client_id" string="Client" context="{'group_by': 'client_id'}"/>
+                <filter name="groupby_speciality" string="Category" context="{'group_by': 'speciality'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="beauty_client_visit_view_calendar" model="ir.ui.view">
+        <field name="name">beauty.client.visit.view.calendar</field>
+        <field name="model">beauty.client.visit</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Salon visits" mode="month" date_start="date_time_start" date_stop="date_time_finish"
+            form_view_id="%(beauty_salon.beauty_client_visit_view_form)d" event_open_popup="1">
+                <field name="master_id" avatar_field="photo"/>
+                <field name="client_id"/>
+                <field name="service_id"/>
+                <field name="state"/>
+                <field name="spent_time"/>
+                <field name="price"/>
+                <field name="by_appointment"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="beauty_client_visit_view_pivot" model="ir.ui.view">
+         <field name="name">beauty.client.visit.view.pivot</field>
+         <field name="model">beauty.client.visit</field>
+         <field name="arch" type="xml">
+             <pivot display_quantity="0">
+                 <field name="date_time_start" interval="day" type="col"/>
+                 <field name="service_id" type="row"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="beauty_client_visit_view_graph" model="ir.ui.view">
+        <field name="name">beauty.client.visit.view.graph</field>
+        <field name="model">beauty.client.visit</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="date_time_start" interval="day"/>
+                <field name="service_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="beauty_client_visit_wizard_act_window" model="ir.actions.act_window">
+        <field name="name">Client visits report</field>
+        <field name="res_model">beauty.client.visit.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_beauty_client_visit"/>
+        <field name="binding_view_types">form,list</field>
+        <field name="binding_type">report</field>
+    </record>n
+
+    <record id="beauty_client_visit_act_window"
+            model="ir.actions.act_window">
+        <field name="name">Client visit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.client.visit</field>
+        <field name="view_mode">tree,form,calendar,pivot,graph</field>
+    </record>
+
+    <menuitem id="beauty_client_visit_menu"
+              action="beauty_client_visit_act_window"
+              parent="beauty_salon_client_visit_menu"
+              name="Client visit" sequence="21"/>
+
+</odoo>
