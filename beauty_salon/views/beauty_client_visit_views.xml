@@ -69,8 +69,8 @@
         <field name="priority" eval="2"/>
         <field name="arch" type="xml">
             <calendar string="Salon visits" mode="month" date_start="date_time_start" date_stop="date_time_finish"
-            form_view_id="%(beauty_salon.beauty_client_visit_view_form)d" event_open_popup="1">
-                <field name="master_id" avatar_field="photo"/>
+            form_view_id="%(beauty_salon.beauty_client_visit_view_form)d" event_open_popup="1" quick_add="False" color="master_id">
+                <field name="master_id" avatar_field="avatar_128"/>
                 <field name="client_id"/>
                 <field name="service_id"/>
                 <field name="state"/>
